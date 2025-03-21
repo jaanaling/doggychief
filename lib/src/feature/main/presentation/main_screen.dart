@@ -25,11 +25,11 @@ class _MainScreenState extends State<MainScreen> {
   bool isFavorite = false;
   String selectedCategory = '';
   List<String> categories = [
-    "Puppy",
-    "Adult",
-    "Senior",
-    "Grain-Free",
-    "Weight Management",
+    'Puppy',
+    'Adult',
+    'Senior',
+    'Grain-Free',
+    'Weight\nManagement',
   ];
 
   @override
@@ -59,225 +59,284 @@ class _MainScreenState extends State<MainScreen> {
               isFavoriteMatch;
         }).toList();
 
-        return Expanded(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  AnimatedButton(
-                      onPressed: () {
-                        context.push(
-                          "${RouteValue.home.path}/${RouteValue.create.path}",
-                        );
-                      },
-                      child: AppIcon(
-                        asset: state.dog.image ??
-                            IconProvider.addphoto.buildImageUrl(),
-                        width: 73,
-                        height: 73,
-                      )),
-                  AppButton(
-                    isRound: true,
-                    style: ButtonColors.yellow,
-                    text: "",
-                    child: AppIcon(asset: IconProvider.box.buildImageUrl()),
-                    onPressed: () {
-                      context.push(
-                        "${RouteValue.home.path}/${RouteValue.storage.path}",
-                      );
-                    },
-                  ),
-                  AppButton(
-                    isRound: true,
-                    style: ButtonColors.yellow,
-                    text: "",
-                    child:
-                        AppIcon(asset: IconProvider.database.buildImageUrl()),
-                    onPressed: () {
-                      context.push(
-                        "${RouteValue.home.path}/${RouteValue.base.path}",
-                      );
-                    },
-                  ),
-                  AppButton(
-                    isRound: true,
-                    style: ButtonColors.green,
-                    text: "",
-                    child: AppIcon(asset: IconProvider.shop.buildImageUrl()),
-                    onPressed: () {
-                      context.push(
-                        "${RouteValue.home.path}/${RouteValue.shop.path}",
-                      );
-                    },
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Stack(
+        return SingleChildScrollView(
+          child: SafeArea(
+            child: Column(
+              children: [
+                Gap(10),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Row(
                     children: [
-                      AppIcon(
-                        asset: IconProvider.search.buildImageUrl(),
-                        height: getHeight(context, baseSize: 75),
-                        width: getWidth(context, baseSize: 235),
-                      ),
-                      SizedBox(
-                          width: getWidth(context, baseSize: 200),
-                          height: getHeight(context, baseSize: 75),
-                          child: AppTextField(
-                            controller: controller,
-                          )),
-                    ],
-                  ),
-                  AppButton(
-                    isRound: true,
-                    style:
-                        isRecomended ? ButtonColors.green : ButtonColors.yellow,
-                    text: "",
-                    child: AppIcon(
-                        asset: IconProvider.recommended.buildImageUrl()),
-                    onPressed: () {
-                      setState(() {
-                        isRecomended = !isRecomended;
-                      });
-                    },
-                  ),
-                  AnimatedButton(
-                    child: AppIcon(
-                        width: 48,
-                        asset: isFavorite
-                            ? IconProvider.favorites.buildImageUrl()
-                            : IconProvider.unfavorite.buildImageUrl()),
-                    onPressed: () {
-                      setState(() {
-                        isFavorite = !isFavorite;
-                      });
-                    },
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: getHeight(context, baseSize: 43),
-                child: ListView.separated(
-                  itemCount: categories.length,
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  separatorBuilder: (context, index) => const Gap(8),
-                  itemBuilder: (context, index) {
-                    final category = categories[index];
-                    return AppButton(
-                      verticalPadding: 0,
-                      fontSize: 20,
-                      style: selectedCategory == category
-                          ? ButtonColors.yellow
-                          : ButtonColors.purple,
-                      onPressed: () {
-                        setState(() {
-                          selectedCategory =
-                              selectedCategory == category ? '' : category;
-                        });
-                      },
-                      text: category,
-                    );
-                  },
-                ),
-              ),
-              ListView.separated(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: filtredRecipes.length,
-                separatorBuilder: (context, index) => const Gap(16),
-                itemBuilder: (context, index) {
-                  final recipe = filtredRecipes[index];
-                  final isFavoriteRes =
-                      state.dog.favoriteRecipes.contains(recipe.id);
-                  return AnimatedButton(
-                    onPressed: () {
-                      context.push(
-                        "${RouteValue.home.path}/${RouteValue.recipe.path}",
-                        extra: recipe.id,
-                      );
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image:
-                              AssetImage(IconProvider.button.buildImageUrl()),
-                          fit: BoxFit.fill,
+                      AnimatedButton(
+                        onPressed: () {
+                          context.push(
+                            '${RouteValue.home.path}/${RouteValue.create.path}',
+                          );
+                        },
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.white,
+                            ),
+                            borderRadius: BorderRadius.circular(73),
+                            boxShadow: const [
+                              BoxShadow(
+                                  color: Color(0x30000000), offset: Offset(0, 3))
+                            ],
+                          ),
+                          child: ClipOval(
+                            child: AppIcon(
+                              asset: state.dog.image ??
+                                  IconProvider.addphoto.buildImageUrl(),
+                              width: 73,
+                              height: 73,
+                            ),
+                          ),
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 13, vertical: 9),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            AppIcon(
-                              asset: recipe.image,
-                              width: 113,
+                      Spacer(),
+                      AppButton(
+                        isRound: true,
+                        style: ButtonColors.yellow,
+                        text: '',
+                        child: AppIcon(asset: IconProvider.box.buildImageUrl()),
+                        onPressed: () {
+                          context.push(
+                            '${RouteValue.home.path}/${RouteValue.storage.path}',
+                          );
+                        },
+                      ),
+                      Gap(10),
+                      AppButton(
+                        isRound: true,
+                        style: ButtonColors.yellow,
+                        text: '',
+                        child:
+                            AppIcon(asset: IconProvider.database.buildImageUrl()),
+                        onPressed: () {
+                          context.push(
+                            '${RouteValue.home.path}/${RouteValue.base.path}',
+                          );
+                        },
+                      ),
+                      Gap(10),
+                      AppButton(
+                        isRound: true,
+                        style: ButtonColors.green,
+                        text: '',
+                        child: AppIcon(asset: IconProvider.shop.buildImageUrl()),
+                        onPressed: () {
+                          context.push(
+                            '${RouteValue.home.path}/${RouteValue.shop.path}',
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Row(
+                    children: [
+                      Stack(
+                        children: [
+                          AppIcon(
+                            asset: IconProvider.search.buildImageUrl(),
+                            height: getHeight(context, baseSize: 75),
+                            width: getWidth(context, baseSize: 200),
+                          ),
+                          SizedBox(
+                            width: getWidth(context, baseSize: 200),
+                            height: getHeight(context, baseSize: 75),
+                            child: AppTextField(
+                              controller: controller,
                             ),
-                            Column(
+                          ),
+                        ],
+                      ),
+                      Gap(10),
+                      AppButton(
+                        isRound: true,
+                        style: isRecomended
+                            ? ButtonColors.green
+                            : ButtonColors.yellow,
+                        text: '',
+                        child: AppIcon(
+                          asset: IconProvider.recommended.buildImageUrl(),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            isRecomended = !isRecomended;
+                          });
+                        },
+                      ),
+                      Gap(10),
+                      AnimatedButton(
+                        child: AppIcon(
+                          width: 48,
+                          asset: isFavorite
+                              ? IconProvider.favorites.buildImageUrl()
+                              : IconProvider.unfavorite.buildImageUrl(),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            isFavorite = !isFavorite;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: getHeight(context, baseSize: 43),
+                  child: ListView.separated(
+                    itemCount: categories.length,
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    separatorBuilder: (context, index) => const Gap(0),
+                    itemBuilder: (context, index) {
+                      final category = categories[index];
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: AppButton(
+                          verticalPadding: 0,
+                          fontSize: 20,
+                          style: selectedCategory == category
+                              ? ButtonColors.yellow
+                              : ButtonColors.purple,
+                          onPressed: () {
+                            setState(() {
+                              selectedCategory =
+                                  selectedCategory == category ? '' : category;
+                            });
+                          },
+                          text: category,
+                          child: Padding(
+                            padding: const EdgeInsets.only(bottom: 5),
+                            child: SizedBox(
+                              width: 100,
+                              height: 33,
+                              child: Center(
+                                child: FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: TextWithBorder(
+                                    category,
+                                    fontSize: 23,
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+                Gap(11),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: ListView.separated(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: filtredRecipes.length,
+                    separatorBuilder: (context, index) => const Gap(16),
+                    itemBuilder: (context, index) {
+                      final recipe = filtredRecipes[index];
+                      final isFavoriteRes =
+                          state.dog.favoriteRecipes.contains(recipe.id);
+                      return AnimatedButton(
+                        onPressed: () {
+                          context.push(
+                            '${RouteValue.home.path}/${RouteValue.recipe.path}',
+                            extra: recipe.id,
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage(IconProvider.button.buildImageUrl()),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 13,
+                              vertical: 9,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                TextWithBorder(recipe.name),
-                                Text(
-                                  "Calories: ${recipe.calories}",
-                                  style: const TextStyle(
-                                    color: Color(0xFF894406),
-                                    fontSize: 17,
-                                  ),
+                                AppIcon(
+                                  asset: recipe.image,
+                                  width: 113,
                                 ),
-                                Text(
-                                  "Carbohydrates: ${recipe.carbohydrates}",
-                                  style: const TextStyle(
-                                    color: Color(0xFF894406),
-                                    fontSize: 17,
-                                  ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    TextWithBorder(recipe.name),
+                                    Text(
+                                      'Calories: ${recipe.calories}',
+                                      style: const TextStyle(
+                                        color: Color(0xFF894406),
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Carbohydrates: ${recipe.carbohydrates}',
+                                      style: const TextStyle(
+                                        color: Color(0xFF894406),
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Fat: ${recipe.fat}',
+                                      style: const TextStyle(
+                                        color: Color(0xFF894406),
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Protein: ${recipe.protein}',
+                                      style: const TextStyle(
+                                        color: Color(0xFF894406),
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  "Fat: ${recipe.fat}",
-                                  style: const TextStyle(
-                                    color: Color(0xFF894406),
-                                    fontSize: 17,
-                                  ),
-                                ),
-                                Text(
-                                  "Protein: ${recipe.protein}",
-                                  style: const TextStyle(
-                                    color: Color(0xFF894406),
-                                    fontSize: 17,
+                                AnimatedButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      isFavorite = !isFavorite;
+
+                                      context.read<UserBloc>().add(
+                                            UserToggleFavoriteData(
+                                              id: recipe.id,
+                                            ),
+                                          );
+                                    });
+                                  },
+                                  child: AppIcon(
+                                    asset: isFavoriteRes
+                                        ? IconProvider.favorites.buildImageUrl()
+                                        : IconProvider.unfavorite.buildImageUrl(),
+                                    width: 37,
                                   ),
                                 ),
                               ],
                             ),
-                            AnimatedButton(
-                              onPressed: () {
-                                setState(() {
-                                  isFavorite = !isFavorite;
-
-                                  context.read<UserBloc>().add(
-                                        UserToggleFavoriteData(
-                                          id: recipe.id,
-                                        ),
-                                      );
-                                });
-                              },
-                              child: AppIcon(
-                                asset: isFavoriteRes
-                                    ? IconProvider.favorites.buildImageUrl()
-                                    : IconProvider.unfavorite.buildImageUrl(),
-                                width: 37,
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ],
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },

@@ -40,21 +40,29 @@ class AppButton extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
-              isRound
+              isRound && style != ButtonColors.green
                   ? IconProvider.littleButton.buildImageUrl()
+                  :isRound && style == ButtonColors.green
+                  ? 'assets/images/square_green_button.png'
+                  : style == ButtonColors.purple
+                      ? 'assets/images/purple_button.png'
+                      : style == ButtonColors.yellow
+                  ? 'assets/images/yellow_button.png'
                   : IconProvider.roundButton.buildImageUrl(),
             ),
-            fit: BoxFit.fill,
-            colorFilter: ColorFilter.mode(
-              style.colors,
-              BlendMode.modulate,
-            ),
+            colorFilter: style == ButtonColors.purple || isRound && style == ButtonColors.purple
+                ? null
+                : ColorFilter.mode(
+                    style.colors,
+                    BlendMode.modulate,
+                  ),
+            fit: BoxFit.fill
           ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: horizontalPadding ?? 12,
-            vertical: isRound ? horizontalPadding ?? 12 : verticalPadding ?? 12,
+            horizontal: horizontalPadding ?? (isRound ? 12 : 0),
+            vertical: isRound ? horizontalPadding ?? 12 : verticalPadding ?? 0,
           ),
           child: Center(
             child: child ??
