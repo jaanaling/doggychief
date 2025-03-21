@@ -118,63 +118,70 @@ class _CreateScreenState extends State<CreateScreen> {
                       showModalBottomSheet(
                         context: context,
                         builder: (context) {
-                          return Column(
-                            children: [
-                              SizedBox(
-                                height: 250,
-                                child: CupertinoPicker(
-                                  itemExtent: 50,
-                                  onSelectedItemChanged: (index) {
-                                    setState(() {
-                                      selectedBreed = dogBreeds[index];
-                                    });
-                                  },
-                                  children: List.generate(
-                                    dogBreeds.length,
-                                    (index) => TextWithBorder(
-                                      dogBreeds[index],
+                          return SafeArea(
+                            top: false,
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                SizedBox(
+                                  height: 250,
+                                  child: CupertinoPicker(
+                                    itemExtent: 50,
+                                    onSelectedItemChanged: (index) {
+                                      setState(() {
+                                        selectedBreed = dogBreeds[index];
+                                      });
+                                    },
+                                    children: List.generate(
+                                      dogBreeds.length,
+                                      (index) => TextWithBorder(
+                                        dogBreeds[index],
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              AppButton(
-                                style: ButtonColors.green,
-                                onPressed: () => context.pop(),
-                                text: "OK",
-                              ),
-                            ],
+                                AppButton(
+                                  style: ButtonColors.green,
+                                  onPressed: () => context.pop(),
+                                  text: "OK",
+                                ),
+                              ],
+                            ),
                           );
                         },
                       );
                     },
                   ),
-                  Material(
-                    color: Colors.black.withValues(alpha: 0.28),
-                    borderRadius: BorderRadius.circular(13),
-                    child: Column(
-                      children: [
-                        Text(
-                          "activity",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontFamily: 'Font',
-                            fontWeight: FontWeight.w500,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Material(
+                      color: Colors.black.withValues(alpha: 0.28),
+                      borderRadius: BorderRadius.circular(13),
+                      child: Column(
+                        children: [
+                          Text(
+                            "activity",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                              fontFamily: 'Font',
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
-                        ),
-                        Slider(
-                          value: activity.toDouble(),
-                          thumbColor: const Color(0xFFBDDE00),
-                          activeColor: const Color(0xFFBDDE00),
-                          inactiveColor: Colors.white,
-                          min: 1,
-                          max: 5,
-                          divisions: 4,
-                          onChanged: (value) => setState(() {
-                            activity = value.toInt();
-                          }),
-                        ),
-                      ],
+                          Slider(
+                            value: activity.toDouble(),
+                            thumbColor: const Color(0xFFBDDE00),
+                            activeColor: const Color(0xFFBDDE00),
+                            inactiveColor: Colors.white,
+                            min: 1,
+                            max: 5,
+                            divisions: 4,
+                            onChanged: (value) => setState(() {
+                              activity = value.toInt();
+                            }),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   if (error != null) TextWithBorder(error!),

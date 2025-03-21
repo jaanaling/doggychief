@@ -79,6 +79,7 @@ class _MainScreenState extends State<MainScreen> {
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: Colors.white,
+                              width: 2
                             ),
                             borderRadius: BorderRadius.circular(73),
                             boxShadow: const [
@@ -87,12 +88,16 @@ class _MainScreenState extends State<MainScreen> {
                                   offset: Offset(0, 3))
                             ],
                           ),
-                          child: ClipOval(
-                            child: AppIcon(
-                              asset: state.dog.image ??
-                                  IconProvider.addphoto.buildImageUrl(),
-                              width: 73,
-                              height: 73,
+                          child: Padding(
+                            padding: const EdgeInsets.all(1),
+                            child: ClipOval(
+                              child: AppIcon(
+                                asset: state.dog.image ??
+                                    IconProvider.addphoto.buildImageUrl(),
+                                width: 73,
+                                height: 73,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
@@ -161,6 +166,7 @@ class _MainScreenState extends State<MainScreen> {
                             width: getWidth(context, baseSize: 220),
                           ),
                           AppTextField(
+                            keyboardType: TextInputType.text,
                             controller: controller,
                             width: getWidth(context, baseSize: 150),
                             maxLines: 1,

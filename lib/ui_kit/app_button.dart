@@ -46,7 +46,9 @@ class AppButton extends StatelessWidget {
                   ? 'assets/images/square_green_button.png'
                   : style == ButtonColors.purple
                       ? 'assets/images/purple_button.png'
-                      : style == ButtonColors.yellow
+                      :style == ButtonColors.red
+                  ? 'assets/images/red_button.png'
+                  : style == ButtonColors.yellow
                   ? 'assets/images/yellow_button.png'
                   : IconProvider.roundButton.buildImageUrl(),
             ),

@@ -76,6 +76,8 @@ class ShoppingScreen extends StatelessWidget {
                                         width: 220,
                                         controller: name,
                                         title: "Name",
+
+                                          keyboardType: TextInputType.text,
                                         backgrund: true,
                                       ),
                                       AppTextField(

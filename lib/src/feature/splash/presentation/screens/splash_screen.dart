@@ -1,4 +1,3 @@
-import 'package:advertising_id/advertising_id.dart';
 import 'package:doggie_chef/src/core/utils/app_icon.dart';
 import 'package:doggie_chef/src/core/utils/size_utils.dart';
 import 'package:doggie_chef/ui_kit/loading_animation.dart';
@@ -25,7 +24,6 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> startLoading(BuildContext context) async {
     await Future.delayed(const Duration(milliseconds: 1000));
 
-    final adId = await AdvertisingId.id(true);
     context.go(RouteValue.home.path);
   }
 

@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:doggie_chef/src/core/utils/animated_button.dart';
 import 'package:doggie_chef/src/core/utils/app_icon.dart';
+import 'package:doggie_chef/src/core/utils/cupertino_snack_bar.dart';
 import 'package:doggie_chef/src/core/utils/icon_provider.dart';
 import 'package:doggie_chef/src/core/utils/size_utils.dart';
 import 'package:doggie_chef/src/core/utils/text_with_border.dart';
@@ -85,8 +86,9 @@ class _RecipeScreenState extends State<RecipeScreen> {
                           ),
                         ),
                         AnimatedButton(
+                          key: shareButtonKey2,
                           onPressed: () {
-                            _shareRecipe(shareButtonKey, item.name);
+                            _shareRecipe(shareButtonKey2, item.name);
                           },
                           child: AppIcon(
                             asset: IconProvider.share.buildImageUrl(),
@@ -214,6 +216,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                               ),
                               Gap(10),
                               AppButton(
+
                                 style: ButtonColors.green,
                                 isRound: true,
                                 width: 63,
@@ -400,6 +403,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                                 style: ButtonColors.green,
                                 isRound: true,
                                 onPressed: () {
+                                  showCupertinoSnackBar(context, "+${item.ingredients[index].name} in shop list!");
                                   context.read<UserBloc>().add(
                                         UserSaveShoppingData(
                                           ingredient: item.ingredients[index],

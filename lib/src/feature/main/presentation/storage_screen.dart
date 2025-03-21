@@ -81,6 +81,7 @@ class StorageScreen extends StatelessWidget {
                                       AppTextField(
                                         width: 220,
                                         controller: name,
+                                        keyboardType: TextInputType.text,
                                         title: "Name",
                                         backgrund: true,
                                       ),
