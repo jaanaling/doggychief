@@ -64,7 +64,18 @@ class _MainScreenState extends State<MainScreen> {
             children: [
               Row(
                 children: [
-                  if (state.dog.image != null) AppIcon(asset: state.dog.image!),
+                  AnimatedButton(
+                      onPressed: () {
+                        context.push(
+                          "${RouteValue.home.path}/${RouteValue.create.path}",
+                        );
+                      },
+                      child: AppIcon(
+                        asset: state.dog.image ??
+                            IconProvider.addphoto.buildImageUrl(),
+                        width: 73,
+                        height: 73,
+                      )),
                   AppButton(
                     isRound: true,
                     style: ButtonColors.yellow,
@@ -90,7 +101,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   AppButton(
                     isRound: true,
-                    style: ButtonColors.yellow,
+                    style: ButtonColors.green,
                     text: "",
                     child: AppIcon(asset: IconProvider.shop.buildImageUrl()),
                     onPressed: () {
@@ -115,7 +126,6 @@ class _MainScreenState extends State<MainScreen> {
                           height: getHeight(context, baseSize: 75),
                           child: AppTextField(
                             controller: controller,
-                            flex: 0,
                           )),
                     ],
                   ),
@@ -134,6 +144,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   AnimatedButton(
                     child: AppIcon(
+                        width: 48,
                         asset: isFavorite
                             ? IconProvider.favorites.buildImageUrl()
                             : IconProvider.unfavorite.buildImageUrl()),
@@ -146,16 +157,17 @@ class _MainScreenState extends State<MainScreen> {
                 ],
               ),
               SizedBox(
-                height: getHeight(context, baseSize: 55),
+                height: getHeight(context, baseSize: 43),
                 child: ListView.separated(
                   itemCount: categories.length,
                   scrollDirection: Axis.horizontal,
                   shrinkWrap: true,
-                  separatorBuilder: (context, index) => const Gap(16),
+                  separatorBuilder: (context, index) => const Gap(8),
                   itemBuilder: (context, index) {
                     final category = categories[index];
                     return AppButton(
-                      fontSize: 23,
+                      verticalPadding: 0,
+                      fontSize: 20,
                       style: selectedCategory == category
                           ? ButtonColors.yellow
                           : ButtonColors.purple,

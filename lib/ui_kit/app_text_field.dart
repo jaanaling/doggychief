@@ -1,3 +1,6 @@
+import 'package:doggie_chef/src/core/utils/animated_button.dart';
+import 'package:doggie_chef/src/core/utils/app_icon.dart';
+import 'package:doggie_chef/src/core/utils/icon_provider.dart';
 import 'package:gap/gap.dart';
 import 'package:doggie_chef/src/core/utils/size_utils.dart';
 import 'package:flutter/cupertino.dart';
@@ -23,43 +26,46 @@ class CountTextField extends StatelessWidget {
         Text(title),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 17),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              AppButton(
-                style: ButtonColors.red,
-                text: "-",
-                onPressed: () {
-                  if (controller.text.isNotEmpty) {
-                    controller.text =
-                        (int.parse(controller.text) - 1).toString();
-                  } else {
-                    controller.text = "0";
-                  }
-                  setState();
-                },
-              ),
-              SizedBox(
-                width: getWidth(context, baseSize: 149),
-                child: AppTextField(
-                  controller: controller,
-                  flex: 0,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.black.withValues(alpha: 0.28),
+              borderRadius: BorderRadius.circular(13),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AnimatedButton(
+                  onPressed: () {
+                    if (controller.text.isNotEmpty) {
+                      controller.text =
+                          (int.parse(controller.text) - 1).toString();
+                    } else {
+                      controller.text = "0";
+                    }
+                    setState();
+                  },
+                  child: AppIcon(asset: IconProvider.minus.buildImageUrl()),
                 ),
-              ),
-              AppButton(
-                style: ButtonColors.green,
-                text: "+",
-                onPressed: () {
-                  if (controller.text.isNotEmpty) {
-                    controller.text =
-                        (int.parse(controller.text) + 1).toString();
-                  } else {
-                    controller.text = "1";
-                  }
-                  setState();
-                },
-              ),
-            ],
+                SizedBox(
+                  width: getWidth(context, baseSize: 149),
+                  child: AppTextField(
+                    controller: controller,
+                  ),
+                ),
+                AnimatedButton(
+                  onPressed: () {
+                    if (controller.text.isNotEmpty) {
+                      controller.text =
+                          (int.parse(controller.text) + 1).toString();
+                    } else {
+                      controller.text = "1";
+                    }
+                    setState();
+                  },
+                  child: AppIcon(asset: IconProvider.plus.buildImageUrl()),
+                ),
+              ],
+            ),
           ),
         ),
       ],
@@ -96,7 +102,7 @@ class AppTextField extends StatelessWidget {
     return Column(
       children: [
         if (title != null)
-          Expanded(child: TextWithBorder(title!, fontSize: 23)),
+          Expanded(flex: flex, child: TextWithBorder(title!, fontSize: 23)),
         if (title != null) const Gap(10),
         Expanded(
           flex: flex,
@@ -115,7 +121,6 @@ class AppTextField extends StatelessWidget {
               ),
               readOnly: isEdit,
               maxLines: maxLines,
-              placeholder: title,
               textAlign: TextAlign.center,
               padding: EdgeInsets.symmetric(
                 vertical: 6,

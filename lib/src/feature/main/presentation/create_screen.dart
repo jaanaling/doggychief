@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:doggie_chef/src/core/utils/text_with_border.dart';
 import 'package:doggie_chef/src/feature/main/bloc/app_bloc.dart';
 import 'package:doggie_chef/src/feature/main/model/dog.dart';
 import 'package:doggie_chef/ui_kit/app_app_bar.dart';
@@ -69,6 +70,7 @@ class _CreateScreenState extends State<CreateScreen> {
                   ],
                 ),
                 AppTextField(
+                  backgrund: true,
                   controller: name,
                   title: "name",
                 ),
@@ -114,7 +116,7 @@ class _CreateScreenState extends State<CreateScreen> {
                     ),
                   ),
                 ),
-                if (error != null) Text(error!),
+                if (error != null) TextWithBorder(error!),
                 Wrap(
                   children: List.generate(
                     commonDogAllergens.length,

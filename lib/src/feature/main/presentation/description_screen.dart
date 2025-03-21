@@ -30,71 +30,83 @@ class DescriptionScreen extends StatelessWidget {
               child: Column(
                 children: [
                   AppAppBar(title: item.name),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black.withValues(alpha: 0.28),
-                      borderRadius: BorderRadius.circular(13),
-                    ),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              TextWithBorder("Calories: "),
-                              SizedBox(
-                                width: 100,
-                                child: AppTextField(
-                                  backgrund: true,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black.withValues(alpha: 0.28),
+                        borderRadius: BorderRadius.circular(13),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 20),
+                        child: Column(
+                          spacing: 10,
+                          children: [
+                            SizedBox(
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  TextWithBorder("Calories: "),
+                                  AppTextField(
+                                    controller: TextEditingController(
+                                      text: item.calories.toString(),
+                                    ),
+                                    isEdit: false,
+                                    backgrund: true,
+                                  )
+                                ],
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextWithBorder("Fat: "),
+                                AppTextField(
                                   controller: TextEditingController(
-                                    text: item.calories.toString(),
+                                    text: item.fat.toString(),
                                   ),
                                   isEdit: false,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            TextWithBorder("Fat: "),
-                            AppTextField(
-                              controller: TextEditingController(
-                                text: item.fat.toString(),
-                              ),
-                              isEdit: false,
-                            )
+                                  backgrund: true,
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextWithBorder("Protein: "),
+                                AppTextField(
+                                  controller: TextEditingController(
+                                    text: item.protein.toString(),
+                                  ),
+                                  isEdit: false,
+                                  backgrund: true,
+                                )
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                TextWithBorder("Carbohydrates: "),
+                                AppTextField(
+                                  controller: TextEditingController(
+                                    text: item.carbohydrates.toString(),
+                                  ),
+                                  isEdit: false,
+                                  backgrund: true,
+                                )
+                              ],
+                            ),
                           ],
                         ),
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            TextWithBorder("Protein: "),
-                            AppTextField(
-                              controller: TextEditingController(
-                                text: item.protein.toString(),
-                              ),
-                              isEdit: false,
-                            )
-                          ],
-                        ),
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            TextWithBorder("Carbohydrates: "),
-                            AppTextField(
-                              controller: TextEditingController(
-                                text: item.carbohydrates.toString(),
-                              ),
-                              isEdit: false,
-                            )
-                          ],
-                        ),
-                      ],
+                      ),
                     ),
                   ),
-                  TextWithBorder(item.description)
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextWithBorder(item.description),
+                  )
                 ],
               ),
             ),

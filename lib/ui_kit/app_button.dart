@@ -13,7 +13,8 @@ class AppButton extends StatelessWidget {
   final double? height;
   final Widget? child;
   final double? fontSize;
-  
+  final double? verticalPadding;
+  final double? horizontalPadding;
 
   const AppButton({
     super.key,
@@ -25,6 +26,8 @@ class AppButton extends StatelessWidget {
     this.height,
     this.child,
     this.fontSize,
+    this.verticalPadding,
+    this.horizontalPadding,
   });
 
   @override
@@ -36,22 +39,32 @@ class AppButton extends StatelessWidget {
         height: height ?? (isRound ? 63 : 45),
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(  
-                isRound
-                    ? IconProvider.littleButton.buildImageUrl()
-                    : IconProvider.roundButton.buildImageUrl(),
-              ),
-              fit: BoxFit.fill,
-              colorFilter: ColorFilter.mode(
-                style.colors,
-                BlendMode.modulate,
-              )),
+            image: AssetImage(
+              isRound
+                  ? IconProvider.littleButton.buildImageUrl()
+                  : IconProvider.roundButton.buildImageUrl(),
+            ),
+            fit: BoxFit.fill,
+            colorFilter: ColorFilter.mode(
+              style.colors,
+              BlendMode.modulate,
+            ),
+          ),
         ),
         child: Padding(
-            padding: EdgeInsets.all(12),
-            child: Center(
-              child: child ?? TextWithBorder(text, fontSize: fontSize ?? 29, textAlign: TextAlign.center,),
-            )),
+          padding: EdgeInsets.symmetric(
+            horizontal: horizontalPadding ?? 12,
+            vertical: isRound ? horizontalPadding ?? 12 : verticalPadding ?? 12,
+          ),
+          child: Center(
+            child: child ??
+                TextWithBorder(
+                  text,
+                  fontSize: fontSize ?? 29,
+                  textAlign: TextAlign.center,
+                ),
+          ),
+        ),
       ),
     );
   }

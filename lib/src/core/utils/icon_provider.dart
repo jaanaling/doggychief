@@ -21,6 +21,7 @@ enum IconProvider {
   cross(imageName: 'cross.svg'),
   dialog(imageName: 'dialog.png'),
   search(imageName: "search.png"),
+  addphoto(imageName: "add photo.svg"),
 
   unknown(imageName: '');
 
