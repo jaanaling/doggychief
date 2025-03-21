@@ -1,0 +1,1457 @@
+[
+    {
+        "id": 1,
+        "name": "Pawtastic Feast",
+        "description": "This dish is carefully crafted to delight your dog's palate. It's packed with lean protein and healthy vegetables. Serve it as a balanced meal for puppies or a special treat anytime.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Chop the chicken breasts into small pieces."
+            },
+            {
+                "minutes": 10,
+                "description": "Boil the brown rice until fully cooked."
+            },
+            {
+                "minutes": 5,
+                "description": "Mix chicken, rice, and diced carrots in a bowl."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 1,
+                "name": "Chicken Breast",
+                "quantity": 200.0
+            },
+            {
+                "id": 2,
+                "name": "Brown Rice",
+                "quantity": 100.0
+            },
+            {
+                "id": 3,
+                "name": "Carrots",
+                "quantity": 50.0
+            }
+        ],
+        "image": "assets/images/Pawtastic-Feast.png",
+        "category": "Puppy",
+        "calories": 420.0,
+        "fat": 10.0,
+        "protein": 30.0,
+        "carbohydrates": 50.0
+    },
+    {
+        "id": 2,
+        "name": "Wooflicious Delight",
+        "description": "This hearty meal offers a savory combination of beef and vegetables. It's ideal for maintaining muscle mass and overall health in adult dogs. Your furry friend will love the rich flavor.",
+        "steps": [
+            {
+                "minutes": 3,
+                "description": "Dice the beef into bite-sized cubes."
+            },
+            {
+                "minutes": 12,
+                "description": "Sauté beef with chopped zucchini in a pan."
+            },
+            {
+                "minutes": 5,
+                "description": "Stir in cooked oatmeal to bind flavors together."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 4,
+                "name": "Lean Beef",
+                "quantity": 250.0
+            },
+            {
+                "id": 5,
+                "name": "Zucchini",
+                "quantity": 80.0
+            },
+            {
+                "id": 6,
+                "name": "Oatmeal",
+                "quantity": 60.0
+            }
+        ],
+        "image": "assets/images/Wooflicious-Delight.png",
+        "category": "Adult",
+        "calories": 500.0,
+        "fat": 18.0,
+        "protein": 35.0,
+        "carbohydrates": 40.0
+    },
+    {
+        "id": 3,
+        "name": "Bark Bowl",
+        "description": "An easy-to-digest dish crafted for senior dogs. It's packed with protein from turkey and fiber from pumpkin. Keep your older companion satisfied and healthy with this gentle recipe.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Cook ground turkey in a non-stick pan until brown."
+            },
+            {
+                "minutes": 5,
+                "description": "Mash the boiled pumpkin to a smooth consistency."
+            },
+            {
+                "minutes": 2,
+                "description": "Combine turkey, pumpkin, and quinoa in a serving bowl."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 121,
+                "name": "Ground Turkey",
+                "quantity": 200.0
+            },
+            {
+                "id": 242,
+                "name": "Pumpkin",
+                "quantity": 100.0
+            },
+            {
+                "id": 334,
+                "name": "Quinoa",
+                "quantity": 50.0
+            }
+        ],
+        "image": "assets/images/Bark-Bowl.png",
+        "category": "Senior",
+        "calories": 380.0,
+        "fat": 8.0,
+        "protein": 32.0,
+        "carbohydrates": 40.0
+    },
+    {
+        "id": 4,
+        "name": "Tail-Wagging Treat",
+        "description": "Crafted without grains for dogs with sensitive tummies. This fish-based meal provides healthy fats and essential nutrients. Enjoy a gentle yet satisfying recipe for grain-free diets.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Slice the salmon into chunks."
+            },
+            {
+                "minutes": 15,
+                "description": "Bake the salmon with chopped sweet potatoes until cooked."
+            },
+            {
+                "minutes": 2,
+                "description": "Gently flake salmon and mix with sweet potatoes in a bowl."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 1456,
+                "name": "Salmon",
+                "quantity": 180.0
+            },
+            {
+                "id": 2756,
+                "name": "Sweet Potato",
+                "quantity": 80.0
+            },
+            {
+                "id": 3568,
+                "name": "Coconut Oil",
+                "quantity": 5.0
+            }
+        ],
+        "image": "assets/images/Tail-Wagging-Treat.png",
+        "category": "Grain-Free",
+        "calories": 420.0,
+        "fat": 14.0,
+        "protein": 30.0,
+        "carbohydrates": 36.0
+    },
+    {
+        "id": 5,
+        "name": "Furry Feast",
+        "description": "Specially formulated for weight management without sacrificing taste. This dish includes lean chicken and broccoli for essential nutrients. Perfect for dogs watching their waistline.",
+        "steps": [
+            {
+                "minutes": 10,
+                "description": "Boil chicken breast in low-sodium broth."
+            },
+            {
+                "minutes": 5,
+                "description": "Steam broccoli florets until slightly tender."
+            },
+            {
+                "minutes": 3,
+                "description": "Shred chicken and combine with chopped broccoli and brown rice."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 1645,
+                "name": "Chicken Breast",
+                "quantity": 150.0
+            },
+            {
+                "id": 2456,
+                "name": "Broccoli",
+                "quantity": 70.0
+            },
+            {
+                "id": 3354,
+                "name": "Brown Rice",
+                "quantity": 50.0
+            }
+        ],
+        "image": "assets/images/Furry-Feast.png",
+        "category": "Weight Management",
+        "calories": 360.0,
+        "fat": 6.0,
+        "protein": 35.0,
+        "carbohydrates": 30.0
+    },
+    {
+        "id": 6,
+        "name": "Happy Paws Platter",
+        "description": "A playful recipe packed with vitamins and minerals for growing puppies. Featuring ground chicken and butternut squash. Fuel your pup’s active lifestyle with this wholesome meal.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Brown the ground chicken in a pan."
+            },
+            {
+                "minutes": 10,
+                "description": "Boil cubed butternut squash until soft."
+            },
+            {
+                "minutes": 3,
+                "description": "Combine chicken, squash, and a small amount of cooked rice."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 1599,
+                "name": "Ground Chicken",
+                "quantity": 200.0
+            },
+            {
+                "id": 2597,
+                "name": "Butternut Squash",
+                "quantity": 80.0
+            },
+            {
+                "id": 3078,
+                "name": "Rice",
+                "quantity": 30.0
+            }
+        ],
+        "image": "assets/images/Happy-Paws-Platter.png",
+        "category": "Puppy",
+        "calories": 410.0,
+        "fat": 10.0,
+        "protein": 28.0,
+        "carbohydrates": 40.0
+    },
+    {
+        "id": 7,
+        "name": "Puppy Chow Supreme",
+        "description": "An adult dog favorite featuring nutrient-rich organ meats. Loaded with iron and vitamins to keep your dog energized. It's a hearty dish that caters to canine cravings.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Rinse chicken liver and cut into small pieces."
+            },
+            {
+                "minutes": 12,
+                "description": "Sauté liver with chopped spinach."
+            },
+            {
+                "minutes": 2,
+                "description": "Mix in cooked barley to complete the meal."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 1678,
+                "name": "Chicken Liver",
+                "quantity": 150.0
+            },
+            {
+                "id": 2567,
+                "name": "Spinach",
+                "quantity": 50.0
+            },
+            {
+                "id": 3,
+                "name": "Barley",
+                "quantity": 60.0
+            }
+        ],
+        "image": "assets/images/Puppy-Chow-Supreme.png",
+        "category": "Adult",
+        "calories": 480.0,
+        "fat": 12.0,
+        "protein": 35.0,
+        "carbohydrates": 40.0
+    },
+    {
+        "id": 8,
+        "name": "Yappy Meal",
+        "description": "Designed for older dogs with a gentle digestive system. It features soft-cooked turkey and easily mashed peas. This mild meal helps seniors stay lively and content.",
+        "steps": [
+            {
+                "minutes": 7,
+                "description": "Simmer ground turkey in water until cooked."
+            },
+            {
+                "minutes": 5,
+                "description": "Lightly mash the peas after boiling."
+            },
+            {
+                "minutes": 2,
+                "description": "Stir turkey and peas together with cooked oats."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 8901,
+                "name": "Ground Turkey",
+                "quantity": 180.0
+            },
+            {
+                "id": 8672,
+                "name": "Peas",
+                "quantity": 60.0
+            },
+            {
+                "id": 6357,
+                "name": "Oats",
+                "quantity": 30.0
+            }
+        ],
+        "image": "assets/images/Yappy-Meal.png",
+        "category": "Senior",
+        "calories": 370.0,
+        "fat": 7.0,
+        "protein": 28.0,
+        "carbohydrates": 38.0
+    },
+    {
+        "id": 9,
+        "name": "Hound’s Harvest",
+        "description": "A delicious fish and vegetable medley for grain-free diets. Contains antioxidant-packed kale for extra nutrients. Keep your dog feeling fresh and energized throughout the day.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Cube the cod fillet into bite-sized pieces."
+            },
+            {
+                "minutes": 10,
+                "description": "Steam cod with kale until cooked thoroughly."
+            },
+            {
+                "minutes": 2,
+                "description": "Combine everything with a drizzle of fish oil."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 53461,
+                "name": "Cod Fillet",
+                "quantity": 200.0
+            },
+            {
+                "id": 537432,
+                "name": "Kale",
+                "quantity": 60.0
+            },
+            {
+                "id": 364564,
+                "name": "Fish Oil",
+                "quantity": 5.0
+            }
+        ],
+        "image": "assets/images/Hound’s-Harvest.png",
+        "category": "Grain-Free",
+        "calories": 390.0,
+        "fat": 8.0,
+        "protein": 35.0,
+        "carbohydrates": 20.0
+    },
+    {
+        "id": 10,
+        "name": "Mighty Mutt Munch",
+        "description": "Created with balanced nutrients to help manage weight. Uses lean turkey and leafy greens for a satisfying dish. Perfect for dogs needing a lighter yet filling meal.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Cook ground turkey in a skillet over medium heat."
+            },
+            {
+                "minutes": 5,
+                "description": "Toss in chopped kale and let it wilt."
+            },
+            {
+                "minutes": 5,
+                "description": "Add quinoa and mix thoroughly before serving."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 274741,
+                "name": "Ground Turkey",
+                "quantity": 150.0
+            },
+            {
+                "id": 645642,
+                "name": "Kale",
+                "quantity": 50.0
+            },
+            {
+                "id": 8679763,
+                "name": "Quinoa",
+                "quantity": 60.0
+            }
+        ],
+        "image": "assets/images/Mighty-Mutt-Munch.png",
+        "category": "Weight Management",
+        "calories": 350.0,
+        "fat": 8.0,
+        "protein": 32.0,
+        "carbohydrates": 30.0
+    },
+    {
+        "id": 11,
+        "name": "Canine Casserole",
+        "description": "A hearty casserole loaded with chicken and sweet potatoes for puppies. Rich in vitamins and protein to support growth. Watch your pup thrive with every delicious bite.",
+        "steps": [
+            {
+                "minutes": 7,
+                "description": "Cook diced chicken in a pot with water."
+            },
+            {
+                "minutes": 12,
+                "description": "Add cubed sweet potatoes and simmer until tender."
+            },
+            {
+                "minutes": 3,
+                "description": "Mix in a small amount of peas to enhance flavor."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 54361,
+                "name": "Chicken Breast",
+                "quantity": 220.0
+            },
+            {
+                "id": 36742,
+                "name": "Sweet Potato",
+                "quantity": 80.0
+            },
+            {
+                "id": 374574,
+                "name": "Peas",
+                "quantity": 40.0
+            }
+        ],
+        "image": "assets/images/Canine-Casserole.png",
+        "category": "Puppy",
+        "calories": 430.0,
+        "fat": 10.0,
+        "protein": 32.0,
+        "carbohydrates": 40.0
+    },
+    {
+        "id": 12,
+        "name": "Pup-Peroni Surprise",
+        "description": "Ideal for adult dogs seeking a savory experience. This meal uses ground beef and carrots for a hint of sweetness. Sure to bring a big smile to your dog’s face.",
+        "steps": [
+            {
+                "minutes": 6,
+                "description": "Brown the ground beef in a pan."
+            },
+            {
+                "minutes": 8,
+                "description": "Add grated carrots and sauté together."
+            },
+            {
+                "minutes": 5,
+                "description": "Combine with cooked brown rice for a complete meal."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 16547,
+                "name": "Ground Beef",
+                "quantity": 200.0
+            },
+            {
+                "id": 245674,
+                "name": "Carrots",
+                "quantity": 50.0
+            },
+            {
+                "id": 577453,
+                "name": "Brown Rice",
+                "quantity": 70.0
+            }
+        ],
+        "image": "assets/images/Pup-Peroni-Surprise.png",
+        "category": "Adult",
+        "calories": 510.0,
+        "fat": 18.0,
+        "protein": 34.0,
+        "carbohydrates": 42.0
+    },
+    {
+        "id": 13,
+        "name": "The Barking Bite",
+        "description": "Soft and easy to chew for older dogs with sensitive teeth. This stew combines turkey and squash in a gentle broth. Keep senior pups satisfied without straining their jaws.",
+        "steps": [
+            {
+                "minutes": 10,
+                "description": "Boil turkey chunks until tender."
+            },
+            {
+                "minutes": 5,
+                "description": "Mash the squash thoroughly."
+            },
+            {
+                "minutes": 3,
+                "description": "Stir turkey and squash together in warm broth."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 132423,
+                "name": "Turkey Breast",
+                "quantity": 180.0
+            },
+            {
+                "id": 345232,
+                "name": "Squash",
+                "quantity": 80.0
+            },
+            {
+                "id": 453323,
+                "name": "Low-Sodium Broth",
+                "quantity": 100.0
+            }
+        ],
+        "image": "assets/images/The-Barking-Bite.png",
+        "category": "Senior",
+        "calories": 360.0,
+        "fat": 6.0,
+        "protein": 30.0,
+        "carbohydrates": 35.0
+    },
+    {
+        "id": 14,
+        "name": "Tasty Tail Mix",
+        "description": "A grain-free blend of trout and nutrient-dense vegetables. Ideal for dogs with allergies or sensitivities. Enjoy a flavorful meal without any grains.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Cut trout fillet into medium pieces."
+            },
+            {
+                "minutes": 10,
+                "description": "Steam fish with zucchini until both are cooked."
+            },
+            {
+                "minutes": 2,
+                "description": "Drizzle a bit of olive oil for taste and healthy fats."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 33331,
+                "name": "Trout Fillet",
+                "quantity": 200.0
+            },
+            {
+                "id": 44442,
+                "name": "Zucchini",
+                "quantity": 60.0
+            },
+            {
+                "id": 55553,
+                "name": "Olive Oil",
+                "quantity": 5.0
+            }
+        ],
+        "image": "assets/images/Tasty-Tail-Mix.png",
+        "category": "Grain-Free",
+        "calories": 400.0,
+        "fat": 12.0,
+        "protein": 34.0,
+        "carbohydrates": 15.0
+    },
+    {
+        "id": 15,
+        "name": "Snoot-Approved Stew",
+        "description": "A low-calorie stew designed for dogs watching their figure. Contains lean chicken and nutritious kale. Help maintain your dog’s healthy weight with this savory dish.",
+        "steps": [
+            {
+                "minutes": 10,
+                "description": "Boil chicken in water until fully cooked."
+            },
+            {
+                "minutes": 5,
+                "description": "Add chopped kale and simmer gently."
+            },
+            {
+                "minutes": 2,
+                "description": "Season lightly with dog-friendly herbs (no salt) if desired."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 2345551,
+                "name": "Chicken Breast",
+                "quantity": 150.0
+            },
+            {
+                "id": 2356662,
+                "name": "Kale",
+                "quantity": 60.0
+            },
+            {
+                "id": 432466663,
+                "name": "Water",
+                "quantity": 200.0
+            }
+        ],
+        "image": "assets/images/Snoot-Approved-Stew.png",
+        "category": "Weight Management",
+        "calories": 330.0,
+        "fat": 5.0,
+        "protein": 32.0,
+        "carbohydrates": 25.0
+    },
+    {
+        "id": 16,
+        "name": "Drool-Worthy Dinner",
+        "description": "A hearty and wholesome recipe for energetic puppies. Brings together turkey, peas, and brown rice. Watch your little one grow strong and wagging for more.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Cook ground turkey in a pan with minimal oil."
+            },
+            {
+                "minutes": 10,
+                "description": "Boil peas until soft."
+            },
+            {
+                "minutes": 3,
+                "description": "Combine turkey, peas, and cooked brown rice thoroughly."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 346661,
+                "name": "Ground Turkey",
+                "quantity": 200.0
+            },
+            {
+                "id": 978002,
+                "name": "Peas",
+                "quantity": 50.0
+            },
+            {
+                "id": 5007883,
+                "name": "Brown Rice",
+                "quantity": 70.0
+            }
+        ],
+        "image": "assets/images/Drool-Worthy-Dinner.png",
+        "category": "Puppy",
+        "calories": 420.0,
+        "fat": 10.0,
+        "protein": 30.0,
+        "carbohydrates": 45.0
+    },
+    {
+        "id": 17,
+        "name": "Waggin’ Wonders",
+        "description": "Perfect for adult dogs who love a savory, protein-rich meal. This dish blends ground beef with flavorful pumpkin. Keeps your dog feeling full and satisfied.",
+        "steps": [
+            {
+                "minutes": 6,
+                "description": "Brown beef in its own juices over medium heat."
+            },
+            {
+                "minutes": 5,
+                "description": "Stir in mashed pumpkin for additional fiber."
+            },
+            {
+                "minutes": 4,
+                "description": "Mix with a small portion of cooked oats and serve."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 8600871,
+                "name": "Ground Beef",
+                "quantity": 220.0
+            },
+            {
+                "id": 789002,
+                "name": "Pumpkin",
+                "quantity": 80.0
+            },
+            {
+                "id": 96976943,
+                "name": "Oats",
+                "quantity": 40.0
+            }
+        ],
+        "image": "assets/images/Waggin’-Wonders.png",
+        "category": "Adult",
+        "calories": 520.0,
+        "fat": 20.0,
+        "protein": 35.0,
+        "carbohydrates": 38.0
+    },
+    {
+        "id": 18,
+        "name": "Bone Appétit",
+        "description": "Created for senior dogs with extra attention to digestibility. Uses mild white fish and carrots in a gentle broth. A light yet satisfying choice for older companions.",
+        "steps": [
+            {
+                "minutes": 7,
+                "description": "Poach the white fish in water until flaky."
+            },
+            {
+                "minutes": 5,
+                "description": "Shred carrots into thin strips and soften in broth."
+            },
+            {
+                "minutes": 3,
+                "description": "Combine fish and carrots in a single serving dish."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 9567961,
+                "name": "White Fish",
+                "quantity": 160.0
+            },
+            {
+                "id": 67578682,
+                "name": "Carrots",
+                "quantity": 50.0
+            },
+            {
+                "id": 567453483,
+                "name": "Low-Sodium Broth",
+                "quantity": 150.0
+            }
+        ],
+        "image": "assets/images/Bone-Appétit.png",
+        "category": "Senior",
+        "calories": 350.0,
+        "fat": 5.0,
+        "protein": 28.0,
+        "carbohydrates": 30.0
+    },
+    {
+        "id": 19,
+        "name": "Four-Legged Feast",
+        "description": "A sumptuous grain-free meal highlighting salmon and broccoli. Delivers healthy omega-3s and antioxidant benefits. Keep your dog’s coat shiny and tail wagging.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Cut salmon into chunks and remove any bones."
+            },
+            {
+                "minutes": 12,
+                "description": "Bake salmon and broccoli in the oven at 180°C."
+            },
+            {
+                "minutes": 2,
+                "description": "Gently mix and let cool before serving."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 4769671,
+                "name": "Salmon",
+                "quantity": 200.0
+            },
+            {
+                "id": 7869678782,
+                "name": "Broccoli",
+                "quantity": 70.0
+            }
+        ],
+        "image": "assets/images/Four-Legged-Feast.png",
+        "category": "Grain-Free",
+        "calories": 430.0,
+        "fat": 14.0,
+        "protein": 34.0,
+        "carbohydrates": 10.0
+    },
+    {
+        "id": 20,
+        "name": "Muzzle Munch",
+        "description": "Tailored for dogs needing careful weight control. Packed with lean chicken and nutrient-dense spinach. A filling meal that won’t tip the scale.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Sauté chicken strips in a non-stick pan."
+            },
+            {
+                "minutes": 5,
+                "description": "Add spinach and let it wilt slightly."
+            },
+            {
+                "minutes": 3,
+                "description": "Stir in a small portion of boiled barley."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 86796781,
+                "name": "Chicken Breast",
+                "quantity": 140.0
+            },
+            {
+                "id": 5078856782,
+                "name": "Spinach",
+                "quantity": 40.0
+            },
+            {
+                "id": 50786863,
+                "name": "Barley",
+                "quantity": 50.0
+            }
+        ],
+        "image": "assets/images/Muzzle-Munch.png",
+        "category": "Weight Management",
+        "calories": 340.0,
+        "fat": 6.0,
+        "protein": 30.0,
+        "carbohydrates": 28.0
+    },
+    {
+        "id": 21,
+        "name": "The Loyal Lick",
+        "description": "A comforting puppy recipe featuring minced beef and sweet peas. Perfect for building strong muscles and bones. Puppies will lap it up happily every time.",
+        "steps": [
+            {
+                "minutes": 6,
+                "description": "Brown minced beef in a skillet."
+            },
+            {
+                "minutes": 5,
+                "description": "Add sweet peas and cook briefly."
+            },
+            {
+                "minutes": 4,
+                "description": "Stir in cooked brown rice before serving."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 60786567561,
+                "name": "Minced Beef",
+                "quantity": 200.0
+            },
+            {
+                "id": 5050788678582,
+                "name": "Sweet Peas",
+                "quantity": 50.0
+            },
+            {
+                "id": 679860977083,
+                "name": "Brown Rice",
+                "quantity": 60.0
+            }
+        ],
+        "image": "assets/images/The-Loyal-Lick.png",
+        "category": "Puppy",
+        "calories": 440.0,
+        "fat": 15.0,
+        "protein": 30.0,
+        "carbohydrates": 40.0
+    },
+    {
+        "id": 22,
+        "name": "Slobberlicious Meal",
+        "description": "An adult-friendly dinner with a balance of flavors and nutrients. Incorporates turkey and chopped carrots for a savory sweetness. Keep your dog’s energy levels optimal.",
+        "steps": [
+            {
+                "minutes": 7,
+                "description": "Cook turkey cubes in a light broth."
+            },
+            {
+                "minutes": 6,
+                "description": "Add diced carrots and simmer together."
+            },
+            {
+                "minutes": 3,
+                "description": "Mix in a serving of cooked oats before cooling."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 7686796781,
+                "name": "Turkey Breast",
+                "quantity": 200.0
+            },
+            {
+                "id": 786876962,
+                "name": "Carrots",
+                "quantity": 60.0
+            },
+            {
+                "id": 56896703,
+                "name": "Oats",
+                "quantity": 40.0
+            }
+        ],
+        "image": "assets/images/Slobberlicious-Meal.png",
+        "category": "Adult",
+        "calories": 480.0,
+        "fat": 12.0,
+        "protein": 33.0,
+        "carbohydrates": 45.0
+    },
+    {
+        "id": 23,
+        "name": "Whisker-Lickin’ Good",
+        "description": "A senior recipe made to be gentle on teeth and stomach. Smoothly cooked chicken with tender broccoli florets. Your older companion will relish every bite.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Poach chicken until it shreds easily."
+            },
+            {
+                "minutes": 6,
+                "description": "Steam broccoli florets until soft."
+            },
+            {
+                "minutes": 2,
+                "description": "Combine chicken and broccoli in a mild broth."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 8678067781,
+                "name": "Chicken Breast",
+                "quantity": 180.0
+            },
+            {
+                "id": 6706879686782,
+                "name": "Broccoli",
+                "quantity": 60.0
+            },
+            {
+                "id": 96875698703,
+                "name": "Mild Broth",
+                "quantity": 150.0
+            }
+        ],
+        "image": "assets/images/Whisker-Lickin’-Good.png",
+        "category": "Senior",
+        "calories": 340.0,
+        "fat": 5.0,
+        "protein": 28.0,
+        "carbohydrates": 28.0
+    },
+    {
+        "id": 24,
+        "name": "Dapper Dog Dish",
+        "description": "A grain-free feast of tuna and fresh zucchini. High in protein and low in carbs for a light treat. Indulge dogs with fishy goodness minus the grains.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Drain tuna and break it into chunks."
+            },
+            {
+                "minutes": 7,
+                "description": "Lightly sauté zucchini slices with coconut oil."
+            },
+            {
+                "minutes": 2,
+                "description": "Combine tuna and zucchini in a bowl."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 986780678651,
+                "name": "Tuna",
+                "quantity": 150.0
+            },
+            {
+                "id": 80746765782,
+                "name": "Zucchini",
+                "quantity": 70.0
+            },
+            {
+                "id": 9789879079783,
+                "name": "Coconut Oil",
+                "quantity": 5.0
+            }
+        ],
+        "image": "assets/images/Dapper-Dog-Dish.png",
+        "category": "Grain-Free",
+        "calories": 320.0,
+        "fat": 8.0,
+        "protein": 30.0,
+        "carbohydrates": 10.0
+    },
+    {
+        "id": 25,
+        "name": "Sniff & Savor",
+        "description": "A low-fat, high-fiber dish for dogs watching their waistline. Uses turkey and green beans for a nourishing, light meal. Perfect for maintaining a healthy body condition.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Lightly brown turkey in a pan."
+            },
+            {
+                "minutes": 7,
+                "description": "Steam green beans until crisp-tender."
+            },
+            {
+                "minutes": 2,
+                "description": "Combine turkey, beans, and a small scoop of brown rice."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 89707897801,
+                "name": "Ground Turkey",
+                "quantity": 160.0
+            },
+            {
+                "id": 9780798790872,
+                "name": "Green Beans",
+                "quantity": 60.0
+            },
+            {
+                "id": 607896789708967983,
+                "name": "Brown Rice",
+                "quantity": 40.0
+            }
+        ],
+        "image": "assets/images/Sniff-&-Savor.png",
+        "category": "Weight Management",
+        "calories": 330.0,
+        "fat": 6.0,
+        "protein": 28.0,
+        "carbohydrates": 28.0
+    },
+    {
+        "id": 26,
+        "name": "Gourmutt Special",
+        "description": "A gourmet puppy delight with chicken, carrots, and a hint of apple. Sweetness balances the protein for an enticing flavor. Provide a luxurious treat to your growing companion.",
+        "steps": [
+            {
+                "minutes": 6,
+                "description": "Cook chicken until lightly browned."
+            },
+            {
+                "minutes": 5,
+                "description": "Add shredded carrots and diced apple to the pan."
+            },
+            {
+                "minutes": 4,
+                "description": "Mix in a small portion of cooked oats for texture."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 8978907897801,
+                "name": "Chicken Breast",
+                "quantity": 200.0
+            },
+            {
+                "id": 297807890,
+                "name": "Carrots",
+                "quantity": 40.0
+            },
+            {
+                "id": 34668567457,
+                "name": "Apple",
+                "quantity": 30.0
+            },
+            {
+                "id": 456898565767,
+                "name": "Oats",
+                "quantity": 30.0
+            }
+        ],
+        "image": "assets/images/Gourmutt-Special.png",
+        "category": "Puppy",
+        "calories": 420.0,
+        "fat": 10.0,
+        "protein": 32.0,
+        "carbohydrates": 42.0
+    },
+    {
+        "id": 27,
+        "name": "Bow-Wow Banquet",
+        "description": "An indulgent adult recipe featuring pork and sweet potatoes. Brings a savory-sweet harmony that dogs adore. A delightful way to keep adult dogs eager for mealtime.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Cut pork loin into chunks and cook thoroughly."
+            },
+            {
+                "minutes": 10,
+                "description": "Boil sweet potatoes until soft and mash lightly."
+            },
+            {
+                "minutes": 3,
+                "description": "Combine pork, potatoes, and a dash of olive oil."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 185685746575,
+                "name": "Pork Loin",
+                "quantity": 200.0
+            },
+            {
+                "id": 256785676,
+                "name": "Sweet Potato",
+                "quantity": 70.0
+            },
+            {
+                "id": 3856857,
+                "name": "Olive Oil",
+                "quantity": 5.0
+            }
+        ],
+        "image": "assets/images/Bow-Wow-Banquet.png",
+        "category": "Adult",
+        "calories": 520.0,
+        "fat": 20.0,
+        "protein": 32.0,
+        "carbohydrates": 38.0
+    },
+    {
+        "id": 28,
+        "name": "The Happy Howl",
+        "description": "Gentle on senior stomachs with chicken and pumpkin. Provides easy digestibility and a mild flavor. Support your older dog’s health with this comforting blend.",
+        "steps": [
+            {
+                "minutes": 7,
+                "description": "Boil diced chicken until no longer pink."
+            },
+            {
+                "minutes": 5,
+                "description": "Stir in canned pumpkin and warm gently."
+            },
+            {
+                "minutes": 2,
+                "description": "Serve over a small portion of soft-cooked oatmeal."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 347641,
+                "name": "Chicken Breast",
+                "quantity": 170.0
+            },
+            {
+                "id": 26575684,
+                "name": "Pumpkin Purée",
+                "quantity": 60.0
+            },
+            {
+                "id": 3855649756,
+                "name": "Oatmeal",
+                "quantity": 40.0
+            }
+        ],
+        "image": "assets/images/The-Happy-Howl.png",
+        "category": "Senior",
+        "calories": 350.0,
+        "fat": 6.0,
+        "protein": 28.0,
+        "carbohydrates": 30.0
+    },
+    {
+        "id": 29,
+        "name": "Pup’s Favorite Bite",
+        "description": "A grain-free feast of chicken and green peas. High in protein, perfect for dogs avoiding grains. Keeps pups satisfied without any extra fillers.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Cube chicken breast and sear in a hot pan."
+            },
+            {
+                "minutes": 8,
+                "description": "Add peas and cook until tender."
+            },
+            {
+                "minutes": 2,
+                "description": "Cool slightly and serve as a fresh, grain-free delight."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 658556841,
+                "name": "Chicken Breast",
+                "quantity": 180.0
+            },
+            {
+                "id": 75434683432,
+                "name": "Green Peas",
+                "quantity": 60.0
+            }
+        ],
+        "image": "assets/images/Pup’s-Favorite-Bite.png",
+        "category": "Grain-Free",
+        "calories": 400.0,
+        "fat": 9.0,
+        "protein": 35.0,
+        "carbohydrates": 15.0
+    },
+    {
+        "id": 30,
+        "name": "Fetch & Feast",
+        "description": "Designed with weight management in mind. Combines white fish and broccoli for a satisfying light dish. Help keep your dog active and fit with this meal.",
+        "steps": [
+            {
+                "minutes": 6,
+                "description": "Poach white fish in water until flaky."
+            },
+            {
+                "minutes": 5,
+                "description": "Steam broccoli florets until tender."
+            },
+            {
+                "minutes": 2,
+                "description": "Combine fish and broccoli, then drizzle with fish oil."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 75685563751,
+                "name": "White Fish",
+                "quantity": 160.0
+            },
+            {
+                "id": 67585467652,
+                "name": "Broccoli",
+                "quantity": 60.0
+            },
+            {
+                "id": 86579687743,
+                "name": "Fish Oil",
+                "quantity": 5.0
+            }
+        ],
+        "image": "assets/images/Fetch-&-Feast.png",
+        "category": "Weight Management",
+        "calories": 340.0,
+        "fat": 6.0,
+        "protein": 30.0,
+        "carbohydrates": 20.0
+    },
+    {
+        "id": 31,
+        "name": "Belly Rub Bliss",
+        "description": "A puppy-approved meal using turkey and apples for a sweet note. Great for building muscles and a healthy immune system. Each bite is packed with essential nutrients.",
+        "steps": [
+            {
+                "minutes": 5,
+                "description": "Brown minced turkey lightly in a pan."
+            },
+            {
+                "minutes": 5,
+                "description": "Add diced apples and sauté gently."
+            },
+            {
+                "minutes": 3,
+                "description": "Mix in some cooked barley for extra texture."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 9674671,
+                "name": "Minced Turkey",
+                "quantity": 180.0
+            },
+            {
+                "id": 453543242,
+                "name": "Apple",
+                "quantity": 30.0
+            },
+            {
+                "id": 56406546543,
+                "name": "Barley",
+                "quantity": 40.0
+            }
+        ],
+        "image": "assets/images/Belly-Rub-Bliss.png",
+        "category": "Puppy",
+        "calories": 410.0,
+        "fat": 10.0,
+        "protein": 28.0,
+        "carbohydrates": 45.0
+    },
+    {
+        "id": 32,
+        "name": "Lickety Split Supper",
+        "description": "An adult-oriented recipe brimming with hearty pork and sweet carrots. Perfect for active dogs needing robust energy. Expect lots of tail wags at dinnertime.",
+        "steps": [
+            {
+                "minutes": 7,
+                "description": "Cook chopped pork thoroughly in a pan."
+            },
+            {
+                "minutes": 6,
+                "description": "Add shredded carrots and cook until soft."
+            },
+            {
+                "minutes": 3,
+                "description": "Combine with cooked quinoa for a final touch."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 30456701,
+                "name": "Pork",
+                "quantity": 200.0
+            },
+            {
+                "id": 2045564054,
+                "name": "Carrots",
+                "quantity": 50.0
+            },
+            {
+                "id": 503450456783,
+                "name": "Quinoa",
+                "quantity": 60.0
+            }
+        ],
+        "image": "assets/images/Lickety-Split-Supper.png",
+        "category": "Adult",
+        "calories": 540.0,
+        "fat": 22.0,
+        "protein": 32.0,
+        "carbohydrates": 40.0
+    },
+    {
+        "id": 33,
+        "name": "Tail Twister Treat",
+        "description": "A soft-textured meal made for gentle senior appetites. Salmon and squash blend seamlessly for easy chewing. A taste that’ll have tails gently wagging in no time.",
+        "steps": [
+            {
+                "minutes": 8,
+                "description": "Poach salmon in a small amount of water."
+            },
+            {
+                "minutes": 5,
+                "description": "Mash squash until smooth."
+            },
+            {
+                "minutes": 2,
+                "description": "Combine salmon and squash into a unified stew."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 550540540451,
+                "name": "Salmon",
+                "quantity": 150.0
+            },
+            {
+                "id": 5564458542,
+                "name": "Squash",
+                "quantity": 70.0
+            }
+        ],
+        "image": "assets/images/Tail-Twister-Treat.png",
+        "category": "Senior",
+        "calories": 340.0,
+        "fat": 8.0,
+        "protein": 28.0,
+        "carbohydrates": 20.0
+    },
+    {
+        "id": 34,
+        "name": "Barkin’ Good Bites",
+        "description": "A grain-free mix of turkey and spinach. Delivers satisfying protein in a low-carb format. Keep your dog’s meal plan clean and simple.",
+        "steps": [
+            {
+                "minutes": 6,
+                "description": "Cook ground turkey until fully browned."
+            },
+            {
+                "minutes": 4,
+                "description": "Stir in chopped spinach and let it wilt."
+            },
+            {
+                "minutes": 2,
+                "description": "Cool slightly and serve in a shallow bowl."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 1005400044,
+                "name": "Ground Turkey",
+                "quantity": 180.0
+            },
+            {
+                "id": 200455870,
+                "name": "Spinach",
+                "quantity": 50.0
+            }
+        ],
+        "image": "assets/images/Barkin’-Good-Bites.png",
+        "category": "Grain-Free",
+        "calories": 380.0,
+        "fat": 9.0,
+        "protein": 32.0,
+        "carbohydrates": 10.0
+    },
+    {
+        "id": 35,
+        "name": "Sit, Stay, Snack",
+        "description": "A carefully portioned dish for dogs needing to watch their weight. Utilizes lean ground chicken and fiber-rich zucchini. Your pet can enjoy a tasty meal without the extra pounds.",
+        "steps": [
+            {
+                "minutes": 6,
+                "description": "Brown the lean ground chicken in a non-stick skillet."
+            },
+            {
+                "minutes": 5,
+                "description": "Add diced zucchini and cook until tender."
+            },
+            {
+                "minutes": 2,
+                "description": "Serve topped with a tablespoon of low-sodium broth."
+            }
+        ],
+        "ingredients": [
+            {
+                "id": 55055500054441,
+                "name": "Lean Ground Chicken",
+                "quantity": 140.0
+            },
+            {
+                "id": 255500054477,
+                "name": "Zucchini",
+                "quantity": 60.0
+            },
+            {
+                "id": 355522201104,
+                "name": "Low-Sodium Broth",
+                "quantity": 30.0
+            }
+        ],
+        "image": "assets/images/Sit,-Stay,-Snack.png",
+        "category": "Weight Management",
+        "calories": 330.0,
+        "fat": 5.0,
+        "protein": 30.0,
+        "carbohydrates": 25.0
+    }
+]

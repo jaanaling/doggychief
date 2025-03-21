@@ -1,0 +1,603 @@
+[
+    {
+      "id": 1,
+      "name": "Chicken Breast",
+      "description": "Chicken breast is a top-quality, lean protein source that many dogs love. It provides essential amino acids for maintaining healthy muscles. Because it's low in fat, it's suitable for a wide range of canine diets.",
+      "fat": 3.6,
+      "protein": 31.0,
+      "carbohydrates": 0.0,
+      "calories": 165.0,
+      "isGood": true
+    },
+    {
+      "id": 2,
+      "name": "Turkey Breast",
+      "description": "Turkey breast is another lean poultry option that offers a mild flavor many dogs enjoy. It's packed with protein to support muscle maintenance and overall health. Additionally, it has a moderate fat content, making it an excellent alternative for dogs with dietary restrictions.",
+      "fat": 2.0,
+      "protein": 29.0,
+      "carbohydrates": 0.0,
+      "calories": 150.0,
+      "isGood": true
+    },
+    {
+      "id": 3,
+      "name": "Lean Beef",
+      "description": "Lean beef is a highly palatable protein source and can serve as a staple in a dog's diet. It contains vital nutrients like iron and B vitamins, supporting energy and red blood cell production. Choose cuts with minimal visible fat to avoid excessive calories.",
+      "fat": 10.0,
+      "protein": 26.0,
+      "carbohydrates": 0.0,
+      "calories": 250.0,
+      "isGood": true
+    },
+    {
+      "id": 4,
+      "name": "Salmon",
+      "description": "Salmon is rich in omega-3 fatty acids, which can support a healthy coat and skin in dogs. It also offers a high-quality protein content to help maintain muscle mass. Proper cooking is essential to eliminate any potential parasites.",
+      "fat": 13.0,
+      "protein": 20.0,
+      "carbohydrates": 0.0,
+      "calories": 208.0,
+      "isGood": true
+    },
+    {
+      "id": 5,
+      "name": "Tuna",
+      "description": "Tuna provides a flavorful, lean protein option that dogs often find appealing. It's naturally low in fat and can be an occasional treat or meal component. Due to potential mercury content, moderation is key when feeding tuna to dogs.",
+      "fat": 1.0,
+      "protein": 29.0,
+      "carbohydrates": 0.0,
+      "calories": 132.0,
+      "isGood": true
+    },
+    {
+      "id": 6,
+      "name": "Cod",
+      "description": "Cod is a light, flaky fish that is gentle on a dog's stomach. It contains lean protein with minimal fat, making it a good choice for overweight or sensitive dogs. Always ensure it is cooked thoroughly to reduce the risk of parasites.",
+      "fat": 1.0,
+      "protein": 24.0,
+      "carbohydrates": 0.0,
+      "calories": 105.0,
+      "isGood": true
+    },
+    {
+      "id": 7,
+      "name": "Lamb",
+      "description": "Lamb is a novel protein source that can be beneficial for dogs with food sensitivities. It has a higher fat content compared to some other meats, but it also provides valuable nutrients like zinc and iron. Cooking lamb properly helps render it safe and digestible.",
+      "fat": 17.0,
+      "protein": 25.0,
+      "carbohydrates": 0.0,
+      "calories": 294.0,
+      "isGood": true
+    },
+    {
+      "id": 8,
+      "name": "Egg",
+      "description": "Eggs are often considered a complete protein, containing all essential amino acids. They also provide vitamins like A and B, contributing to a dog's overall health. It's crucial to cook eggs to reduce the risk of salmonella and other pathogens.",
+      "fat": 5.0,
+      "protein": 13.0,
+      "carbohydrates": 1.1,
+      "calories": 155.0,
+      "isGood": true
+    },
+    {
+      "id": 9,
+      "name": "Plain Yogurt",
+      "description": "Plain yogurt offers beneficial probiotics that may aid your dog's digestive system. It's also a decent source of calcium and protein. Be sure to avoid yogurts with added sweeteners, especially xylitol.",
+      "fat": 0.4,
+      "protein": 10.0,
+      "carbohydrates": 5.0,
+      "calories": 80.0,
+      "isGood": true
+    },
+    {
+      "id": 10,
+      "name": "Cottage Cheese",
+      "description": "Cottage cheese is a mild dairy product that can be a protein-rich snack for dogs. It's relatively low in fat if you choose the low-fat variety, making it easier on your dog's waistline. Always introduce dairy products gradually to watch for signs of lactose intolerance.",
+      "fat": 2.0,
+      "protein": 11.0,
+      "carbohydrates": 3.0,
+      "calories": 90.0,
+      "isGood": true
+    },
+    {
+      "id": 11,
+      "name": "Carrots",
+      "description": "Carrots are a crunchy, low-calorie treat that many dogs enjoy. They're high in beta-carotene, which is good for vision and immune function. When cut into small pieces, they can also promote dental health by reducing plaque buildup.",
+      "fat": 0.2,
+      "protein": 0.7,
+      "carbohydrates": 10.0,
+      "calories": 41.0,
+      "isGood": true
+    },
+    {
+      "id": 12,
+      "name": "Pumpkin",
+      "description": "Pumpkin is full of fiber, making it helpful for both diarrhea and constipation in dogs. It's also a great source of vitamins A and C. Always serve plain, cooked pumpkin without added sugars or spices.",
+      "fat": 0.1,
+      "protein": 1.0,
+      "carbohydrates": 7.5,
+      "calories": 30.0,
+      "isGood": true
+    },
+    {
+      "id": 13,
+      "name": "Sweet Potatoes",
+      "description": "Sweet potatoes contain dietary fiber that supports healthy digestion. They also provide vitamins like beta-carotene, contributing to improved eye health. Make sure they are cooked thoroughly and served plain to avoid upsetting your dog's stomach.",
+      "fat": 0.0,
+      "protein": 2.0,
+      "carbohydrates": 20.0,
+      "calories": 86.0,
+      "isGood": true
+    },
+    {
+      "id": 14,
+      "name": "Spinach",
+      "description": "Spinach is packed with vitamins and minerals, offering a nutritional boost for dogs. However, it also contains oxalates, which can affect kidney health if consumed in excess. Feeding small amounts occasionally is generally safe and beneficial.",
+      "fat": 0.4,
+      "protein": 3.0,
+      "carbohydrates": 4.0,
+      "calories": 23.0,
+      "isGood": true
+    },
+    {
+      "id": 15,
+      "name": "Green Beans",
+      "description": "Green beans are a filling, low-calorie treat suitable for dogs needing to shed a few pounds. They provide fiber, vitamins, and a satisfying crunch. Opt for fresh or frozen green beans without added salt or seasoning.",
+      "fat": 0.1,
+      "protein": 1.8,
+      "carbohydrates": 7.0,
+      "calories": 31.0,
+      "isGood": true
+    },
+    {
+      "id": 16,
+      "name": "Zucchini",
+      "description": "Zucchini is a hydrating veggie that can serve as a low-calorie snack for dogs. It contains potassium and vitamins to help support overall health. Lightly steam or serve raw slices for a nutritious treat.",
+      "fat": 0.3,
+      "protein": 1.2,
+      "carbohydrates": 3.0,
+      "calories": 17.0,
+      "isGood": true
+    },
+    {
+      "id": 17,
+      "name": "Peas",
+      "description": "Peas are an easily accessible vegetable high in vitamins and fiber. They can be served fresh or frozen, but avoid canned peas with added salt. Moderate amounts can complement a dog's diet nicely without adding excessive calories.",
+      "fat": 0.4,
+      "protein": 5.4,
+      "carbohydrates": 15.0,
+      "calories": 81.0,
+      "isGood": true
+    },
+    {
+      "id": 18,
+      "name": "Blueberries",
+      "description": "Blueberries are tiny powerhouses filled with antioxidants that help combat free radicals. They also contain fiber and vitamins, supporting healthy digestion. Their natural sweetness makes them a fun, occasional treat for dogs.",
+      "fat": 0.3,
+      "protein": 0.7,
+      "carbohydrates": 14.5,
+      "calories": 57.0,
+      "isGood": true
+    },
+    {
+      "id": 19,
+      "name": "Apples",
+      "description": "Apples provide a crunchy source of vitamins and fiber for dogs. Be sure to remove the core and seeds, as they contain small amounts of cyanide. Sliced apples can serve as a refreshing snack on a warm day.",
+      "fat": 0.2,
+      "protein": 0.3,
+      "carbohydrates": 14.0,
+      "calories": 52.0,
+      "isGood": true
+    },
+    {
+      "id": 20,
+      "name": "Watermelon",
+      "description": "Watermelon is hydrating and naturally sweet, making it a delightful treat in hot weather. Always remove the rind and seeds before serving to prevent choking and digestive issues. This fruit also contains vitamins A, B6, and C.",
+      "fat": 0.2,
+      "protein": 0.6,
+      "carbohydrates": 8.0,
+      "calories": 30.0,
+      "isGood": true
+    },
+    {
+      "id": 21,
+      "name": "Bananas",
+      "description": "Bananas are rich in potassium, which can aid heart and muscle function. Their natural sugars offer a quick energy boost, but high amounts can contribute to weight gain. Moderation is crucial to avoid excessive calorie intake.",
+      "fat": 0.3,
+      "protein": 1.1,
+      "carbohydrates": 23.0,
+      "calories": 96.0,
+      "isGood": true
+    },
+    {
+      "id": 22,
+      "name": "Strawberries",
+      "description": "Strawberries are loaded with antioxidants, fiber, and vitamin C. They can help support a dog's immune system and overall health. Remove the stems and leaves before feeding to your pet.",
+      "fat": 0.3,
+      "protein": 0.7,
+      "carbohydrates": 7.7,
+      "calories": 32.0,
+      "isGood": true
+    },
+    {
+      "id": 23,
+      "name": "Oatmeal (cooked)",
+      "description": "Oatmeal is a healthy source of soluble fiber that can aid dogs with digestive irregularities. Serve it plain, without added sugars or flavorings. Gradual introduction is key to prevent stomach upset.",
+      "fat": 2.4,
+      "protein": 2.4,
+      "carbohydrates": 12.0,
+      "calories": 70.0,
+      "isGood": true
+    },
+    {
+      "id": 24,
+      "name": "Barley (cooked)",
+      "description": "Barley is a whole grain that offers energy and dietary fiber for dogs. Cook it thoroughly to ensure it's easy to digest. Its mild flavor pairs well with lean meats or vegetables.",
+      "fat": 1.0,
+      "protein": 3.0,
+      "carbohydrates": 22.0,
+      "calories": 108.0,
+      "isGood": true
+    },
+    {
+      "id": 25,
+      "name": "Brown Rice (cooked)",
+      "description": "Brown rice is a staple carbohydrate for many canine diets. It provides more fiber and nutrients than white rice, contributing to balanced digestion. Keep portions moderate to avoid excessive carbs.",
+      "fat": 1.8,
+      "protein": 2.6,
+      "carbohydrates": 23.0,
+      "calories": 111.0,
+      "isGood": true
+    },
+    {
+      "id": 26,
+      "name": "Quinoa (cooked)",
+      "description": "Quinoa is a protein-rich seed that supplies essential amino acids for dogs. It's gluten-free and can serve as a substitute for traditional grains. Rinse it before cooking to remove saponins, which can sometimes upset digestion.",
+      "fat": 2.0,
+      "protein": 4.4,
+      "carbohydrates": 21.0,
+      "calories": 120.0,
+      "isGood": true
+    },
+    {
+      "id": 27,
+      "name": "Peanut Butter (no xylitol)",
+      "description": "Peanut butter without xylitol can be a tasty, protein-packed treat for dogs. It's often used to fill interactive toys, keeping dogs mentally stimulated. Always check labels to ensure there's no added sugar or harmful artificial sweeteners.",
+      "fat": 8.0,
+      "protein": 4.0,
+      "carbohydrates": 6.0,
+      "calories": 100.0,
+      "isGood": true
+    },
+    {
+      "id": 28,
+      "name": "Coconut Oil",
+      "description": "Coconut oil can support a shiny coat and healthy skin in dogs due to its medium-chain triglycerides. Start with small amounts to minimize the risk of gastrointestinal upset. Use it sparingly, as it's high in calories.",
+      "fat": 14.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 120.0,
+      "isGood": true
+    },
+    {
+      "id": 29,
+      "name": "Beef Liver",
+      "description": "Beef liver is a nutrient-dense organ meat offering vitamin A, iron, and other essential minerals. It should be served in moderation to avoid hypervitaminosis A. Proper cooking helps reduce the risk of bacterial contamination.",
+      "fat": 3.6,
+      "protein": 26.0,
+      "carbohydrates": 3.8,
+      "calories": 175.0,
+      "isGood": true
+    },
+    {
+      "id": 30,
+      "name": "Seaweed (Kelp/Nori)",
+      "description": "Seaweed varieties like kelp and nori provide iodine and trace minerals that can support thyroid function. Introduce it gradually to avoid upsetting your dog's stomach. Watch for salted or flavored seaweed products, which should be avoided.",
+      "fat": 0.5,
+      "protein": 1.7,
+      "carbohydrates": 9.6,
+      "calories": 45.0,
+      "isGood": true
+    },
+    {
+      "id": 31,
+      "name": "Chocolate",
+      "description": "Chocolate contains theobromine and caffeine, both of which are toxic to dogs. Even small amounts can lead to vomiting, diarrhea, or more severe symptoms. Keep all chocolate products out of your dog's reach for their safety.",
+      "fat": 30.0,
+      "protein": 7.9,
+      "carbohydrates": 59.0,
+      "calories": 535.0,
+      "isGood": false
+    },
+    {
+      "id": 32,
+      "name": "Grapes",
+      "description": "Grapes can cause acute kidney failure in dogs, and the mechanism is not yet fully understood. Even a single grape can be potentially dangerous for some dogs. It's best to avoid them entirely to ensure your pet's well-being.",
+      "fat": 0.2,
+      "protein": 0.7,
+      "carbohydrates": 18.0,
+      "calories": 69.0,
+      "isGood": false
+    },
+    {
+      "id": 33,
+      "name": "Raisins",
+      "description": "Raisins are dehydrated grapes, making their toxicity even more concentrated. They pose a severe risk of kidney failure in dogs. Always keep raisins and foods containing them away from pets.",
+      "fat": 0.5,
+      "protein": 3.1,
+      "carbohydrates": 79.0,
+      "calories": 299.0,
+      "isGood": false
+    },
+    {
+      "id": 34,
+      "name": "Macadamia Nuts",
+      "description": "Macadamia nuts are highly toxic to dogs, potentially causing weakness, tremors, or pancreatitis. Even a few nuts can trigger severe symptoms. It's safest to keep all macadamia products entirely off-limits.",
+      "fat": 76.0,
+      "protein": 8.0,
+      "carbohydrates": 14.0,
+      "calories": 718.0,
+      "isGood": false
+    },
+    {
+      "id": 35,
+      "name": "Onions",
+      "description": "Onions contain thiosulfate, a compound that can damage a dog's red blood cells. This can lead to anemia, weakness, and other health complications. Cooking does not fully eliminate the risk, so it's best to avoid them altogether.",
+      "fat": 0.0,
+      "protein": 1.1,
+      "carbohydrates": 10.0,
+      "calories": 40.0,
+      "isGood": false
+    },
+    {
+      "id": 36,
+      "name": "Garlic",
+      "description": "Garlic is related to onions and can cause similar issues in dogs when consumed in sufficient quantities. It damages red blood cells, leading to hemolytic anemia over time. Though small, well-cooked amounts are sometimes used in dog treats, it's generally safer to skip it.",
+      "fat": 0.5,
+      "protein": 6.4,
+      "carbohydrates": 33.0,
+      "calories": 149.0,
+      "isGood": false
+    },
+    {
+      "id": 37,
+      "name": "Avocado",
+      "description": "Avocado contains persin, which can be toxic to dogs, especially in the leaves, skin, and pit. The flesh is less harmful, but still potentially problematic in large quantities. To be safe, avoid feeding avocado to your dog.",
+      "fat": 15.0,
+      "protein": 2.0,
+      "carbohydrates": 9.0,
+      "calories": 160.0,
+      "isGood": false
+    },
+    {
+      "id": 38,
+      "name": "Xylitol",
+      "description": "Xylitol is an artificial sweetener found in sugar-free gum, candy, and baked goods. It rapidly lowers a dog's blood sugar, leading to seizures and potential liver failure. Even small amounts can be lethal, so never let your dog consume xylitol.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 0.0,
+      "isGood": false
+    },
+    {
+      "id": 39,
+      "name": "Alcohol",
+      "description": "Alcohol can cause serious intoxication and health complications in dogs, including respiratory depression. Their smaller body size and different metabolism make them highly susceptible. It's critical to keep all alcoholic beverages and products away from pets.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 0.0,
+      "isGood": false
+    },
+    {
+      "id": 40,
+      "name": "Coffee",
+      "description": "Coffee contains caffeine, which is dangerous for dogs due to its effect on the cardiovascular and nervous systems. Signs of toxicity can include restlessness, rapid heart rate, and seizures. Keep coffee grounds and beans well out of reach.",
+      "fat": 0.0,
+      "protein": 0.1,
+      "carbohydrates": 0.0,
+      "calories": 2.0,
+      "isGood": false
+    },
+    {
+      "id": 41,
+      "name": "Tea",
+      "description": "Tea also contains caffeine, posing similar risks to dogs as coffee does. Even decaffeinated tea can be problematic if it contains other harmful compounds. It's safer to offer water or dog-friendly herbal alternatives.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 1.0,
+      "isGood": false
+    },
+    {
+      "id": 42,
+      "name": "Raw Bread Dough",
+      "description": "Raw bread dough can expand in a dog's stomach, leading to bloating and discomfort. Fermentation produces alcohol, which can be toxic. Always ensure your pet cannot access rising dough left to proof.",
+      "fat": 1.0,
+      "protein": 6.0,
+      "carbohydrates": 50.0,
+      "calories": 257.0,
+      "isGood": false
+    },
+    {
+      "id": 43,
+      "name": "Artificial Sweeteners",
+      "description": "Various artificial sweeteners, including xylitol, can be extremely dangerous for dogs. They can cause hypoglycemia, liver damage, or neurological symptoms. Always review product labels to ensure there's no hidden risk.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 0.0,
+      "isGood": false
+    },
+    {
+      "id": 44,
+      "name": "Uncooked Salmon",
+      "description": "Raw salmon may contain parasites like Neorickettsia helminthoeca, causing salmon poisoning disease in dogs. This condition can be fatal if not treated promptly. Thorough cooking kills the parasites, making salmon safe to eat.",
+      "fat": 13.0,
+      "protein": 20.0,
+      "carbohydrates": 0.0,
+      "calories": 208.0,
+      "isGood": false
+    },
+    {
+      "id": 45,
+      "name": "Tomato Plant (leaves/stems)",
+      "description": "Green parts of the tomato plant contain solanine, which is toxic to dogs. Ingestion can lead to gastrointestinal upset and neurological signs. Ripe tomato flesh is generally safer, but it's best to keep dogs away from the plant itself.",
+      "fat": 0.2,
+      "protein": 1.0,
+      "carbohydrates": 3.0,
+      "calories": 18.0,
+      "isGood": false
+    },
+    {
+      "id": 46,
+      "name": "Wild Mushrooms",
+      "description": "Many wild mushrooms contain toxins that can lead to severe illness or death in dogs. Identification can be challenging, so it's best to assume all wild mushrooms are potentially harmful. Prevent dogs from foraging during walks or in your yard.",
+      "fat": 0.3,
+      "protein": 3.5,
+      "carbohydrates": 6.5,
+      "calories": 37.0,
+      "isGood": false
+    },
+    {
+      "id": 47,
+      "name": "Walnuts",
+      "description": "Walnuts can contain mold toxins that produce tremorgenic mycotoxins, leading to neurological issues. Their high fat content also increases the risk of pancreatitis. It's safer to choose dog-friendly nuts or avoid them entirely.",
+      "fat": 65.0,
+      "protein": 15.0,
+      "carbohydrates": 14.0,
+      "calories": 654.0,
+      "isGood": false
+    },
+    {
+      "id": 48,
+      "name": "Salted Chips",
+      "description": "Salted chips are packed with unhealthy fats and excessive sodium, both of which can harm a dog's cardiovascular health. Overconsumption can lead to dehydration, vomiting, or worse. They offer little to no nutritional value for dogs.",
+      "fat": 35.0,
+      "protein": 6.0,
+      "carbohydrates": 53.0,
+      "calories": 550.0,
+      "isGood": false
+    },
+    {
+      "id": 49,
+      "name": "Candy",
+      "description": "Candy usually contains high levels of sugar or artificial sweeteners like xylitol. This can result in weight gain, tooth decay, and even acute toxicity. It's best to stick to treats formulated specifically for dogs.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 90.0,
+      "calories": 370.0,
+      "isGood": false
+    },
+    {
+      "id": 50,
+      "name": "Ice Cream",
+      "description": "Ice cream often has high levels of sugar and dairy, which can upset a dog's stomach. Some varieties also include toxic ingredients like chocolate or xylitol. Frozen dog treats made with safe ingredients are a better alternative.",
+      "fat": 7.0,
+      "protein": 3.5,
+      "carbohydrates": 20.0,
+      "calories": 160.0,
+      "isGood": false
+    },
+    {
+      "id": 51,
+      "name": "Fat Trimmings",
+      "description": "Feeding leftover fat trimmings can cause pancreatitis, a painful and potentially serious condition in dogs. High-fat diets also contribute to obesity and other health issues. It's wiser to remove and discard excess fats before cooking.",
+      "fat": 40.0,
+      "protein": 10.0,
+      "carbohydrates": 0.0,
+      "calories": 400.0,
+      "isGood": false
+    },
+    {
+      "id": 52,
+      "name": "Cooked Bones",
+      "description": "Cooked bones become brittle and can splinter, leading to choking hazards or internal injuries. Bone shards can perforate a dog's mouth, throat, or intestines. Raw, appropriately sized bones can be safer, but always supervise your dog.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 0.0,
+      "isGood": false
+    },
+    {
+      "id": 53,
+      "name": "Chili Peppers",
+      "description": "Spicy peppers can irritate a dog's mouth and digestive tract. This may lead to pain, excessive drooling, or diarrhea. There's no nutritional benefit to offset these risks, so it's best avoided.",
+      "fat": 0.4,
+      "protein": 2.0,
+      "carbohydrates": 9.0,
+      "calories": 40.0,
+      "isGood": false
+    },
+    {
+      "id": 54,
+      "name": "Peach Pits",
+      "description": "Peach pits contain cyanogenic glycosides, which can release cyanide when ingested. Additionally, the pit can block a dog's airway or intestines if swallowed. Always remove the pit and slice peaches before offering any to your pet.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 0.0,
+      "isGood": false
+    },
+    {
+      "id": 55,
+      "name": "Raw Potato",
+      "description": "Raw potatoes contain solanine, which can be toxic to dogs. Cooking helps reduce solanine levels, making plain cooked potato safer. Still, they should only be an occasional addition to a balanced diet.",
+      "fat": 0.1,
+      "protein": 2.0,
+      "carbohydrates": 17.0,
+      "calories": 77.0,
+      "isGood": false
+    },
+    {
+      "id": 56,
+      "name": "Grapefruit",
+      "description": "Grapefruit is highly acidic, which can irritate a dog's digestive system. Some components can also interfere with certain medications or cause vomiting. It's generally safer to select milder fruits like apples or bananas.",
+      "fat": 0.1,
+      "protein": 0.6,
+      "carbohydrates": 10.0,
+      "calories": 42.0,
+      "isGood": false
+    },
+    {
+      "id": 57,
+      "name": "Sugary Cereals",
+      "description": "Sugary cereals are loaded with refined carbohydrates, contributing to weight gain and dental issues. Some may also contain artificial flavors or sweeteners harmful to dogs. If you want to share cereal, choose unsweetened, whole-grain options instead.",
+      "fat": 1.0,
+      "protein": 3.0,
+      "carbohydrates": 90.0,
+      "calories": 400.0,
+      "isGood": false
+    },
+    {
+      "id": 58,
+      "name": "Green Tea",
+      "description": "Green tea contains caffeine and potentially other compounds that aren't recommended for dogs. While some supplements include green tea extracts in controlled doses, serving brewed green tea is risky. Always consult with a vet before offering any tea-based product.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 0.0,
+      "isGood": false
+    },
+    {
+      "id": 59,
+      "name": "Apple Seeds",
+      "description": "Apple seeds contain trace amounts of cyanide, posing a risk if a dog consumes enough of them. Always remove the seeds before feeding apple slices to your pet. A few seeds may not be fatal, but it's best to practice caution.",
+      "fat": 0.0,
+      "protein": 0.0,
+      "carbohydrates": 0.0,
+      "calories": 0.0,
+      "isGood": false
+    },
+    {
+      "id": 60,
+      "name": "Blue Cheese",
+      "description": "Blue cheese is high in fat and may contain harmful molds that dogs cannot process. It can upset a dog's gastrointestinal tract, causing vomiting or diarrhea. When it comes to cheese, stick to safer, low-fat varieties without mold.",
+      "fat": 28.0,
+      "protein": 21.0,
+      "carbohydrates": 2.0,
+      "calories": 353.0,
+      "isGood": false
+    }
+  ]
+  
