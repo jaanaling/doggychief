@@ -44,7 +44,6 @@ class DescriptionScreen extends StatelessWidget {
                               TextWithBorder("Calories: "),
                               SizedBox(
                                 width: 100,
-                             
                                 child: AppTextField(
                                   backgrund: true,
                                   controller: TextEditingController(

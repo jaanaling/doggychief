@@ -77,6 +77,7 @@ class AppTextField extends StatelessWidget {
     this.maxLines,
     this.flex = 0,
     this.isEdit = true,
+    this.width = 75,
     this.onChanged,
   });
 
@@ -87,6 +88,7 @@ class AppTextField extends StatelessWidget {
   final int? maxLines;
   final int flex;
   final bool isEdit;
+  final double width;
   final Function(String)? onChanged;
 
   @override
@@ -95,33 +97,35 @@ class AppTextField extends StatelessWidget {
       children: [
         if (title != null)
           Expanded(child: TextWithBorder(title!, fontSize: 23)),
-                 if (title != null)
-        const Gap(10),
+        if (title != null) const Gap(10),
         Expanded(
           flex: flex,
-          child: CupertinoTextField(
-            controller: controller,
-            keyboardType: keyboardType,
-            onChanged: onChanged,
-            onTapOutside: (event) {
-              FocusScope.of(context).unfocus();
-            },
-            style: const TextStyle(
-              color: Color(0xFF894406),
-              fontSize: 17,
+          child: SizedBox(
+            width: width,
+            child: CupertinoTextField(
+              controller: controller,
+              keyboardType: keyboardType,
+              onChanged: onChanged,
+              onTapOutside: (event) {
+                FocusScope.of(context).unfocus();
+              },
+              style: const TextStyle(
+                color: Color(0xFF894406),
+                fontSize: 17,
+              ),
+              readOnly: isEdit,
+              maxLines: maxLines,
+              placeholder: title,
+              textAlign: TextAlign.center,
+              padding: EdgeInsets.symmetric(
+                vertical: 6,
+              ),
+              decoration: !backgrund
+                  ? null
+                  : const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
             ),
-            readOnly: isEdit,
-            maxLines: maxLines,
-            placeholder: title,
-            textAlign: TextAlign.center,
-            padding: EdgeInsets.symmetric(
-              vertical: 6,
-            ),
-            decoration: !backgrund
-                ? null
-                : const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(12))),
           ),
         ),
       ],
