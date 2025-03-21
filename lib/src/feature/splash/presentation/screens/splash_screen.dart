@@ -1,6 +1,7 @@
 import 'package:advertising_id/advertising_id.dart';
 import 'package:doggie_chef/src/core/utils/app_icon.dart';
 import 'package:doggie_chef/src/core/utils/size_utils.dart';
+import 'package:doggie_chef/ui_kit/loading_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -49,6 +50,15 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
         ),
+        Positioned(
+          right: isIpad(context)? null:-122,
+          bottom: getHeight(context, baseSize: 90),
+          child: AppIcon(
+            asset: IconProvider.splash.buildImageUrl(),
+            width: 465,
+            fit: BoxFit.fitWidth,
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 50),
           child: Column(
@@ -56,13 +66,10 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               AppIcon(
                 asset: IconProvider.logo.buildImageUrl(),
-                width: getWidth(context, percent: 0.7),
+                width: 326,
                 fit: BoxFit.fitWidth,
               ),
-              const LinearProgressIndicator(
-                backgroundColor: Color(0xfff4dfa7),
-                color: Color(0xFF650E24),
-              ),
+              FourRotatingDots(color: Colors.black, size: 80)
             ],
           ),
         ),

@@ -22,6 +22,8 @@ enum IconProvider {
   dialog(imageName: 'dialog.png'),
   search(imageName: "search.png"),
   addphoto(imageName: "add photo.svg"),
+  splash(imageName: "splash.png"),
+  loader(imageName: "loader.svg"),
 
   unknown(imageName: '');
 
