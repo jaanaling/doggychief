@@ -1,13 +1,16 @@
 import 'dart:ui';
 
+import 'package:doggie_chef/src/core/utils/size_utils.dart';
 import 'package:doggie_chef/src/core/utils/text_with_border.dart';
 import 'package:doggie_chef/src/feature/main/bloc/app_bloc.dart';
 import 'package:doggie_chef/src/feature/main/model/dog.dart';
 import 'package:doggie_chef/ui_kit/app_app_bar.dart';
 import 'package:doggie_chef/ui_kit/app_button.dart';
 import 'package:doggie_chef/ui_kit/app_text_field.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
 
 class CreateScreen extends StatefulWidget {
@@ -21,6 +24,7 @@ class _CreateScreenState extends State<CreateScreen> {
   final List<String> selectedAlergens = [];
   final ageTextField = TextEditingController();
   final weightTextField = TextEditingController();
+  bool isLoad = false;
 
   String? image;
   final name = TextEditingController();
@@ -38,7 +42,7 @@ class _CreateScreenState extends State<CreateScreen> {
         }
 
         final dog = state.dog;
-        if (dog.age == 0 || dog.weight == 0) {
+        if (!isLoad) {
           name.text = dog.name;
           ageTextField.text = dog.age.toString();
           weightTextField.text = dog.weight.toString();
@@ -46,6 +50,7 @@ class _CreateScreenState extends State<CreateScreen> {
           activity = dog.activity;
           selectedAlergens.addAll(dog.alergens);
           image = dog.image;
+          isLoad = true;
         }
 
         return BackdropFilter(
@@ -57,70 +62,109 @@ class _CreateScreenState extends State<CreateScreen> {
             child: Column(
               children: [
                 AppAppBar(title: "Profile"),
+                  const Gap(10),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CountTextField(
+                        width: 165,
                         controller: ageTextField,
                         title: "age",
                         setState: () => setState(() {})),
                     CountTextField(
+                        width: 165,
                         controller: weightTextField,
                         title: "weight",
                         setState: () => setState(() {})),
                   ],
                 ),
+                  const Gap(10),
                 AppTextField(
+                  width: getWidth(context, baseSize: 284),
                   backgrund: true,
                   controller: name,
                   title: "name",
                 ),
+                  const Gap(10),
                 AppButton(
+                  width: getWidth(context, baseSize: 284),
+                  height: getHeight(context, baseSize: 81),
                   style: ButtonColors.yellow,
                   text: selectedBreed ?? "breed",
                   onPressed: () {
                     showModalBottomSheet(
                       context: context,
                       builder: (context) {
-                        return Wrap(
-                          children: List.generate(
-                            dogBreeds.length,
-                            (index) => AppButton(
-                              style: ButtonColors.purple,
-                              onPressed: () {
-                                setState(() {
-                                  selectedBreed = dogBreeds[index];
-                                });
-                                context.pop();
-                              },
-                              text: dogBreeds[index],
+                        return Column(
+                          children: [
+                            SizedBox(
+                              height: 250,
+                              child: CupertinoPicker(
+                                itemExtent: 50,
+                                onSelectedItemChanged: (index) {
+                                  setState(() {
+                                    selectedBreed = dogBreeds[index];
+                                  });
+                                },
+                                children: List.generate(
+                                  dogBreeds.length,
+                                  (index) => TextWithBorder(
+                                    dogBreeds[index],
+                                  ),
+                                ),
+                              ),
                             ),
-                          ),
+                            AppButton(
+                                style: ButtonColors.green,
+                                onPressed: () => context.pop(),
+                                text: "OK")
+                          ],
                         );
                       },
                     );
                   },
                 ),
-                Row(
-                  children: List.generate(
-                    5,
-                    (index) => AppButton(
-                      style: activity == index + 1
-                          ? ButtonColors.yellow
-                          : ButtonColors.purple,
-                      onPressed: () {
-                        setState(() {
-                          activity = index + 1;
-                        });
-                      },
-                      text: (index + 1).toString(),
-                    ),
+                  const Gap(10),
+                Material(
+                  color: Colors.black.withValues(alpha: 0.28),
+                  borderRadius: BorderRadius.circular(13),
+                  child: Column(
+                    children: [
+                      Text(
+                        "activity",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontFamily: 'Font',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Slider(
+                        value: activity.toDouble(),
+                        thumbColor: const Color(0xFFBDDE00),
+                        activeColor: const Color(0xFFBDDE00),
+                        inactiveColor: Colors.white,
+                        min: 1,
+                        max: 5,
+                        divisions: 4,
+                        onChanged: (value) => setState(() {
+                          activity = value.toInt();
+                        }),
+                      ),
+                    ],
                   ),
                 ),
+                if (error != null)   const Gap(10),
                 if (error != null) TextWithBorder(error!),
+                const Gap(10),
                 Wrap(
+                  spacing: 5,
+                  runSpacing: 5,
                   children: List.generate(
                     commonDogAllergens.length,
                     (int index) => AppButton(
+                      width: 130,
+                      fontSize: 18,
                       style:
                           selectedAlergens.contains(commonDogAllergens[index])
                               ? ButtonColors.yellow
@@ -141,6 +185,8 @@ class _CreateScreenState extends State<CreateScreen> {
                 ),
                 const SizedBox(height: 20),
                 AppButton(
+                  width: getWidth(context, baseSize: 284),
+                  height: 81,
                   onPressed: () {
                     if (name.text.isEmpty ||
                         selectedBreed == null ||

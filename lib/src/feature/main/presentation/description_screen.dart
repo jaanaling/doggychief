@@ -53,7 +53,7 @@ class DescriptionScreen extends StatelessWidget {
                                     controller: TextEditingController(
                                       text: item.calories.toString(),
                                     ),
-                                    isEdit: false,
+                                    isEdit: true,
                                     backgrund: true,
                                   )
                                 ],
@@ -67,7 +67,7 @@ class DescriptionScreen extends StatelessWidget {
                                   controller: TextEditingController(
                                     text: item.fat.toString(),
                                   ),
-                                  isEdit: false,
+                                  isEdit: true,
                                   backgrund: true,
                                 )
                               ],
@@ -80,7 +80,7 @@ class DescriptionScreen extends StatelessWidget {
                                   controller: TextEditingController(
                                     text: item.protein.toString(),
                                   ),
-                                  isEdit: false,
+                                  isEdit: true,
                                   backgrund: true,
                                 )
                               ],
@@ -93,7 +93,7 @@ class DescriptionScreen extends StatelessWidget {
                                   controller: TextEditingController(
                                     text: item.carbohydrates.toString(),
                                   ),
-                                  isEdit: false,
+                                  isEdit: true,
                                   backgrund: true,
                                 )
                               ],

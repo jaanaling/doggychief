@@ -27,7 +27,7 @@ class Dog {
   factory Dog.init() {
     return Dog(
       name: '',
-      breed: '',
+      breed: 'breed',
       age: 0,
       gender: 'Male',
       weight: 0,

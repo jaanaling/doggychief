@@ -14,11 +14,13 @@ class CountTextField extends StatelessWidget {
     required this.controller,
     required this.title,
     required this.setState,
+    required this.width,
   });
 
   final TextEditingController controller;
   final String title;
   final VoidCallback setState;
+  final double width;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,44 +29,56 @@ class CountTextField extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 17),
           child: Container(
+            width: width,
             decoration: BoxDecoration(
               color: Colors.black.withValues(alpha: 0.28),
               borderRadius: BorderRadius.circular(13),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                AnimatedButton(
-                  onPressed: () {
-                    if (controller.text.isNotEmpty) {
-                      controller.text =
-                          (int.parse(controller.text) - 1).toString();
-                    } else {
-                      controller.text = "0";
-                    }
-                    setState();
-                  },
-                  child: AppIcon(asset: IconProvider.minus.buildImageUrl()),
-                ),
-                SizedBox(
-                  width: getWidth(context, baseSize: 149),
-                  child: AppTextField(
-                    controller: controller,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  AnimatedButton(
+                    onPressed: () {
+                      if (controller.text.isNotEmpty) {
+                        controller.text =
+                            (int.parse(controller.text) - 1).toString();
+                      } else {
+                        controller.text = "0";
+                      }
+                      setState();
+                    },
+                    child: AppIcon(
+                      asset: IconProvider.minus.buildImageUrl(),
+                      width: 42,
+                      height: 42,
+                    ),
                   ),
-                ),
-                AnimatedButton(
-                  onPressed: () {
-                    if (controller.text.isNotEmpty) {
-                      controller.text =
-                          (int.parse(controller.text) + 1).toString();
-                    } else {
-                      controller.text = "1";
-                    }
-                    setState();
-                  },
-                  child: AppIcon(asset: IconProvider.plus.buildImageUrl()),
-                ),
-              ],
+                  SizedBox(
+                    width: width * 0.35,
+                    child: AppTextField(
+                      controller: controller,
+                    ),
+                  ),
+                  AnimatedButton(
+                    onPressed: () {
+                      if (controller.text.isNotEmpty) {
+                        controller.text =
+                            (int.parse(controller.text) + 1).toString();
+                      } else {
+                        controller.text = "1";
+                      }
+                      setState();
+                    },
+                    child: AppIcon(
+                      asset: IconProvider.plus.buildImageUrl(),
+                      width: 42,
+                      height: 42,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -82,7 +96,7 @@ class AppTextField extends StatelessWidget {
     this.backgrund = false,
     this.maxLines,
     this.flex = 0,
-    this.isEdit = true,
+    this.isEdit = false,
     this.width = 75,
     this.onChanged,
   });

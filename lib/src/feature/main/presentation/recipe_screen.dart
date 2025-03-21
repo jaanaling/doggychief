@@ -195,7 +195,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                                   controller: TextEditingController(
                                     text: item.calories.toString(),
                                   ),
-                                  isEdit: false,
+                                  isEdit: true,
                                 )
                               ],
                             ),
@@ -206,7 +206,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                                   controller: TextEditingController(
                                     text: item.fat.toString(),
                                   ),
-                                  isEdit: false,
+                                  isEdit: true,
                                 )
                               ],
                             ),
@@ -217,7 +217,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                                   controller: TextEditingController(
                                     text: item.protein.toString(),
                                   ),
-                                  isEdit: false,
+                                  isEdit: true,
                                 )
                               ],
                             ),
@@ -228,7 +228,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                                   controller: TextEditingController(
                                     text: item.carbohydrates.toString(),
                                   ),
-                                  isEdit: false,
+                                  isEdit: true,
                                 )
                               ],
                             ),
@@ -252,7 +252,7 @@ class _RecipeScreenState extends State<RecipeScreen> {
                       controller: TextEditingController(
                         text: item.ingredients[index].quantity.toString(),
                       ),
-                      isEdit: false,
+                      isEdit: true,
                     ),
                     AppButton(
                       style: ButtonColors.green,
