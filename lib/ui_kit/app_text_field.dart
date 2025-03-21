@@ -75,7 +75,7 @@ class AppTextField extends StatelessWidget {
     this.title,
     this.backgrund = false,
     this.maxLines,
-    this.flex = 1,
+    this.flex = 0,
     this.isEdit = true,
     this.onChanged,
 

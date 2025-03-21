@@ -139,8 +139,8 @@ class _RecipeScreenState extends State<RecipeScreen> {
 
       return BackdropFilter(
         filter: ImageFilter.blur(
-          sigmaX: 8.0,
-          sigmaY: 8.0,
+          sigmaX: 22.0,
+          sigmaY: 22.0,
         ),
         child: SingleChildScrollView(
           child: Column(

@@ -22,69 +22,82 @@ class DescriptionScreen extends StatelessWidget {
 
         return BackdropFilter(
           filter: ui.ImageFilter.blur(
-            sigmaX: 8.0,
-            sigmaY: 8.0,
+            sigmaX: 22.0,
+            sigmaY: 22.0,
           ),
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                AppAppBar(title: item.name),
-                Container(
-                   decoration: BoxDecoration(
-                  color: Colors.black.withValues(alpha: 0.28),
-                  borderRadius: BorderRadius.circular(13),
-                ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          TextWithBorder("Calories: "),
-                          AppTextField(
-                            controller: TextEditingController(
-                              text: item.calories.toString(),
-                            ),
-                            isEdit: false,
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          TextWithBorder("Fat: "),
-                          AppTextField(
-                            controller: TextEditingController(
-                              text: item.fat.toString(),
-                            ),
-                            isEdit: false,
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          TextWithBorder("Protein: "),
-                          AppTextField(
-                            controller: TextEditingController(
-                              text: item.protein.toString(),
-                            ),
-                            isEdit: false,
-                          )
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          TextWithBorder("Carbohydrates: "),
-                          AppTextField(
-                            controller: TextEditingController(
-                              text: item.carbohydrates.toString(),
-                            ),
-                            isEdit: false,
-                          )
-                        ],
-                      ),
-                    ],
+            child: SafeArea(
+              child: Column(
+                children: [
+                  AppAppBar(title: item.name),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black.withValues(alpha: 0.28),
+                      borderRadius: BorderRadius.circular(13),
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                       
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              TextWithBorder("Calories: "),
+                              SizedBox(
+                                width: 100,
+                                child: AppTextField(
+                                  backgrund: true,
+                                  controller: TextEditingController(
+                                    text: item.calories.toString(),
+                                  ),
+                                  isEdit: false,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            TextWithBorder("Fat: "),
+                            AppTextField(
+                              controller: TextEditingController(
+                                text: item.fat.toString(),
+                              ),
+                              isEdit: false,
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            TextWithBorder("Protein: "),
+                            AppTextField(
+                              controller: TextEditingController(
+                                text: item.protein.toString(),
+                              ),
+                              isEdit: false,
+                            )
+                          ],
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            TextWithBorder("Carbohydrates: "),
+                            AppTextField(
+                              controller: TextEditingController(
+                                text: item.carbohydrates.toString(),
+                              ),
+                              isEdit: false,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                TextWithBorder(item.description)
-              ],
+                  TextWithBorder(item.description)
+                ],
+              ),
             ),
           ),
         );

@@ -41,37 +41,50 @@ class _DataScreenState extends State<DataScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   AppButton(
-                    onPressed: () => setState(() => isGood = true),
+                    onPressed: () => setState(() => isGood = false),
                     width: getWidth(context, baseSize: 169),
+                    height: getHeight(context, baseSize: 57),
                     style: ButtonColors.red,
                     text: "",
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         const TextWithBorder(
                           "bad",
                           borderColor: Color(0xFF6D0000),
                         ),
-                        AppIcon(asset: IconProvider.cross.buildImageUrl()),
+                        Gap(11),
+                        AppIcon(
+                          asset: IconProvider.cross.buildImageUrl(),
+                          height: 24,
+                        ),
                       ],
                     ),
                   ),
                   AppButton(
                     onPressed: () => setState(() => isGood = true),
                     width: getWidth(context, baseSize: 169),
+                    height: getHeight(context, baseSize: 57),
                     style: ButtonColors.green,
                     text: "",
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         const TextWithBorder(
                           "good",
                           borderColor: Color(0xFF406D00),
+                        ), Gap(11),
+                        AppIcon(
+                          asset: IconProvider.mark.buildImageUrl(),
+                          height: 24,
                         ),
-                        AppIcon(asset: IconProvider.mark.buildImageUrl()),
                       ],
                     ),
                   ),
                 ],
-              ),
+              ),Gap(19),
               ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
