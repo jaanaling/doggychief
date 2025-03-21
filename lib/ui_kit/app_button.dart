@@ -48,7 +48,7 @@ class AppButton extends StatelessWidget {
               )),
         ),
         child: Padding(
-            padding: EdgeInsets.all(0),
+            padding: EdgeInsets.all(12),
             child: Center(
               child: child ?? TextWithBorder(text, fontSize: fontSize ?? 29, textAlign: TextAlign.center,),
             )),
