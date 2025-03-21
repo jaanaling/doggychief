@@ -38,13 +38,13 @@ class DescriptionScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(
-                       
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               TextWithBorder("Calories: "),
                               SizedBox(
                                 width: 100,
+                             
                                 child: AppTextField(
                                   backgrund: true,
                                   controller: TextEditingController(

@@ -114,7 +114,7 @@ class AppTextField extends StatelessWidget {
             placeholder: title,
             textAlign: TextAlign.center,
             padding: EdgeInsets.symmetric(
-              vertical: getWidth(context, baseSize: 18),
+              vertical:6,
             ),
             decoration: !backgrund
                 ? null
