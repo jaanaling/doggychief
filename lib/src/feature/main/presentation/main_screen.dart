@@ -108,12 +108,15 @@ class _MainScreenState extends State<MainScreen> {
                       AppIcon(
                         asset: IconProvider.search.buildImageUrl(),
                         height: getHeight(context, baseSize: 75),
-                         width: getWidth(context, baseSize: 235),
+                        width: getWidth(context, baseSize: 235),
                       ),
                       SizedBox(
                           width: getWidth(context, baseSize: 200),
                           height: getHeight(context, baseSize: 75),
-                          child: AppTextField(controller: controller, flex: 0,)),
+                          child: AppTextField(
+                            controller: controller,
+                            flex: 0,
+                          )),
                     ],
                   ),
                   AppButton(
