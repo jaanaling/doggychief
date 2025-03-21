@@ -95,6 +95,7 @@ class AppTextField extends StatelessWidget {
       children: [
         if (title != null)
           Expanded(child: TextWithBorder(title!, fontSize: 23)),
+                 if (title != null)
         const Gap(10),
         Expanded(
           flex: flex,
@@ -114,7 +115,7 @@ class AppTextField extends StatelessWidget {
             placeholder: title,
             textAlign: TextAlign.center,
             padding: EdgeInsets.symmetric(
-              vertical:6,
+              vertical: 6,
             ),
             decoration: !backgrund
                 ? null
