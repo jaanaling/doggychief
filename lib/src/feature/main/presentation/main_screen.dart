@@ -82,7 +82,8 @@ class _MainScreenState extends State<MainScreen> {
                             borderRadius: BorderRadius.circular(73),
                             boxShadow: const [
                               BoxShadow(
-                                  color: Color(0x30000000), offset: Offset(0, 3))
+                                  color: Color(0x30000000),
+                                  offset: Offset(0, 3))
                             ],
                           ),
                           child: ClipOval(
@@ -112,8 +113,8 @@ class _MainScreenState extends State<MainScreen> {
                         isRound: true,
                         style: ButtonColors.yellow,
                         text: '',
-                        child:
-                            AppIcon(asset: IconProvider.database.buildImageUrl()),
+                        child: AppIcon(
+                            asset: IconProvider.database.buildImageUrl()),
                         onPressed: () {
                           context.push(
                             '${RouteValue.home.path}/${RouteValue.base.path}',
@@ -125,7 +126,8 @@ class _MainScreenState extends State<MainScreen> {
                         isRound: true,
                         style: ButtonColors.green,
                         text: '',
-                        child: AppIcon(asset: IconProvider.shop.buildImageUrl()),
+                        child:
+                            AppIcon(asset: IconProvider.shop.buildImageUrl()),
                         onPressed: () {
                           context.push(
                             '${RouteValue.home.path}/${RouteValue.shop.path}',
@@ -256,8 +258,8 @@ class _MainScreenState extends State<MainScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image:
-                                  AssetImage(IconProvider.button.buildImageUrl()),
+                              image: AssetImage(
+                                  IconProvider.button.buildImageUrl()),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -274,39 +276,48 @@ class _MainScreenState extends State<MainScreen> {
                                   asset: recipe.image,
                                   width: 113,
                                 ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    TextWithBorder(recipe.name),
-                                    Text(
-                                      'Calories: ${recipe.calories}',
-                                      style: const TextStyle(
-                                        color: Color(0xFF894406),
-                                        fontSize: 17,
-                                      ),
+                                SizedBox(
+                                  width: getWidth(context, baseSize: 130),
+                                  child: FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        TextWithBorder(isIpad(context)
+                                            ? recipe.name
+                                            : insertLineBreaks(recipe.name)),
+                                        Text(
+                                          'Calories: ${recipe.calories}',
+                                          style: const TextStyle(
+                                            color: Color(0xFF894406),
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                        Text(
+                                          'Carbohydrates: ${recipe.carbohydrates}',
+                                          style: const TextStyle(
+                                            color: Color(0xFF894406),
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                        Text(
+                                          'Fat: ${recipe.fat}',
+                                          style: const TextStyle(
+                                            color: Color(0xFF894406),
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                        Text(
+                                          'Protein: ${recipe.protein}',
+                                          style: const TextStyle(
+                                            color: Color(0xFF894406),
+                                            fontSize: 17,
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                    Text(
-                                      'Carbohydrates: ${recipe.carbohydrates}',
-                                      style: const TextStyle(
-                                        color: Color(0xFF894406),
-                                        fontSize: 17,
-                                      ),
-                                    ),
-                                    Text(
-                                      'Fat: ${recipe.fat}',
-                                      style: const TextStyle(
-                                        color: Color(0xFF894406),
-                                        fontSize: 17,
-                                      ),
-                                    ),
-                                    Text(
-                                      'Protein: ${recipe.protein}',
-                                      style: const TextStyle(
-                                        color: Color(0xFF894406),
-                                        fontSize: 17,
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
                                 AnimatedButton(
                                   onPressed: () {
@@ -323,7 +334,8 @@ class _MainScreenState extends State<MainScreen> {
                                   child: AppIcon(
                                     asset: isFavoriteRes
                                         ? IconProvider.favorites.buildImageUrl()
-                                        : IconProvider.unfavorite.buildImageUrl(),
+                                        : IconProvider.unfavorite
+                                            .buildImageUrl(),
                                     width: 37,
                                   ),
                                 ),
@@ -335,6 +347,7 @@ class _MainScreenState extends State<MainScreen> {
                     },
                   ),
                 ),
+                Gap(15)
               ],
             ),
           ),
@@ -342,4 +355,27 @@ class _MainScreenState extends State<MainScreen> {
       },
     );
   }
+}
+
+String insertLineBreaks(String text, {int maxLineLength = 10}) {
+  List<String> words = text.split(' ');
+  StringBuffer result = StringBuffer();
+  int currentLineLength = 0;
+
+  for (int i = 0; i < words.length; i++) {
+    String word = words[i];
+
+    if (currentLineLength + word.length > maxLineLength) {
+      result.write('\n');
+      currentLineLength = 0;
+    } else if (i != 0) {
+      result.write(' ');
+      currentLineLength += 1;
+    }
+
+    result.write(word);
+    currentLineLength += word.length;
+  }
+
+  return result.toString().trim();
 }

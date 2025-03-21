@@ -98,6 +98,7 @@ class AppTextField extends StatelessWidget {
     this.flex = 0,
     this.isEdit = false,
     this.width = 75,
+    this.verticalPadding = 6,
     this.onChanged,
   });
 
@@ -109,6 +110,7 @@ class AppTextField extends StatelessWidget {
   final int flex;
   final bool isEdit;
   final double width;
+  final double verticalPadding;
   final Function(String)? onChanged;
 
   @override
@@ -137,7 +139,7 @@ class AppTextField extends StatelessWidget {
               maxLines: maxLines,
               textAlign: TextAlign.center,
               padding: EdgeInsets.symmetric(
-                vertical: 6,
+                vertical: verticalPadding,
               ),
               decoration: !backgrund
                   ? null

@@ -6,6 +6,7 @@ import 'package:doggie_chef/src/core/utils/icon_provider.dart';
 import 'package:doggie_chef/src/core/utils/size_utils.dart';
 import 'package:doggie_chef/src/core/utils/text_with_border.dart';
 import 'package:doggie_chef/src/feature/main/bloc/app_bloc.dart';
+import 'package:doggie_chef/src/feature/main/presentation/main_screen.dart';
 import 'package:doggie_chef/ui_kit/app_button.dart';
 import 'package:doggie_chef/ui_kit/app_text_field.dart';
 import 'package:flutter/material.dart';
@@ -53,9 +54,11 @@ class _RecipeScreenState extends State<RecipeScreen> {
                 width: 314,
                 height: 154,
                 decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage(IconProvider.dialog.buildImageUrl()),
-                        fit: BoxFit.fill)),
+                  image: DecorationImage(
+                    image: AssetImage(IconProvider.dialog.buildImageUrl()),
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -68,17 +71,19 @@ class _RecipeScreenState extends State<RecipeScreen> {
                                 .add(UserToggleFavoriteData(id: item.id));
                           },
                           child: AppIcon(
-                              asset: state.dog.favoriteRecipes.contains(item.id)
-                                  ? IconProvider.favorites.buildImageUrl()
-                                  : IconProvider.unfavorite.buildImageUrl()),
+                            asset: state.dog.favoriteRecipes.contains(item.id)
+                                ? IconProvider.favorites.buildImageUrl()
+                                : IconProvider.unfavorite.buildImageUrl(),
+                          ),
                         ),
                         AnimatedButton(
                           onPressed: () {
                             _shareRecipe(shareButtonKey, item.name);
                           },
                           child: AppIcon(
-                              asset: IconProvider.share.buildImageUrl()),
-                        )
+                            asset: IconProvider.share.buildImageUrl(),
+                          ),
+                        ),
                       ],
                     ),
                     const TextWithBorder(
@@ -129,169 +134,309 @@ class _RecipeScreenState extends State<RecipeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<UserBloc, UserState>(builder: (context, state) {
-      if (state is! UserLoaded) {
-        return const Placeholder();
-      }
+    return BlocBuilder<UserBloc, UserState>(
+      builder: (context, state) {
+        if (state is! UserLoaded) {
+          return const Placeholder();
+        }
 
-      final item =
-          state.recipe.where((element) => element.id == widget.id).first;
+        final item =
+            state.recipe.where((element) => element.id == widget.id).first;
 
-      return BackdropFilter(
-        filter: ImageFilter.blur(
-          sigmaX: 22.0,
-          sigmaY: 22.0,
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(
-                width: getWidth(context, percent: 1),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 17, vertical: 17),
-                  child: Row(
-                    children: [
-                      AnimatedButton(
-                          onPressed: () => context.pop(),
-                          child: AppIcon(
-                              asset: IconProvider.back.buildImageUrl())),
-                      Spacer(),
-                      Expanded(flex: 5, child: TextWithBorder(item.name)),
-                      Row(
+        return BackdropFilter(
+          filter: ImageFilter.blur(
+            sigmaX: 22.0,
+            sigmaY: 22.0,
+          ),
+          child: SingleChildScrollView(
+            child: SafeArea(
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: getWidth(context, percent: 1),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 17,
+                        vertical: 17,
+                      ),
+                      child: Row(
                         children: [
                           AnimatedButton(
-                            onPressed: () {
-                              context
-                                  .read<UserBloc>()
-                                  .add(UserToggleFavoriteData(id: item.id));
-                            },
+                            onPressed: () => context.pop(),
                             child: AppIcon(
-                                asset: state.dog.favoriteRecipes
-                                        .contains(item.id)
-                                    ? IconProvider.favorites.buildImageUrl()
-                                    : IconProvider.unfavorite.buildImageUrl()),
+                              asset: IconProvider.back.buildImageUrl(),
+                              width: 66,
+                              fit: BoxFit.fitWidth,
+                            ),
                           ),
-                          AnimatedButton(
-                            onPressed: () {
-                              _shareRecipe(shareButtonKey, item.name);
-                            },
-                            child: AppIcon(
-                                asset: IconProvider.share.buildImageUrl()),
-                          )
+                          Spacer(),
+                          SizedBox(
+                            width: getWidth(context, percent: 1) - 215,
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: TextWithBorder(
+                                isIpad(context)
+                                    ? item.name
+                                    : insertLineBreaks(item.name),
+                              ),
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              AnimatedButton(
+                                onPressed: () {
+                                  context
+                                      .read<UserBloc>()
+                                      .add(UserToggleFavoriteData(id: item.id));
+                                },
+                                child: AppIcon(
+                                  asset: state.dog.favoriteRecipes
+                                          .contains(item.id)
+                                      ? IconProvider.favorites.buildImageUrl()
+                                      : IconProvider.unfavorite.buildImageUrl(),
+                                  width: 37,
+                                  fit: BoxFit.fitWidth,
+                                ),
+                              ),
+                              Gap(10),
+                              AppButton(
+                                style: ButtonColors.green,
+                                isRound: true,
+                                width: 63,
+                                height: 63,
+                                onPressed: () {
+                                  _shareRecipe(shareButtonKey, item.name);
+                                },
+                                key: shareButtonKey,
+                                text: '',
+                                child: Padding(
+                                  padding: const EdgeInsets.only(right: 3),
+                                  child: AppIcon(
+                                    asset: IconProvider.share.buildImageUrl(),
+                                    width: 32,
+                                    fit: BoxFit.fitWidth,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.black.withValues(alpha: 0.28),
-                          borderRadius: BorderRadius.circular(13),
-                        ),
+                    ),
+                  ),
+                  Gap(15),
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: getWidth(context, baseSize: 36),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.black.withValues(alpha: 0.28),
+                        borderRadius: BorderRadius.circular(13),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(13),
                         child: Column(
                           children: [
                             Row(
                               children: [
-                                TextWithBorder("Calories: "),
+                                SizedBox(
+                                  width: getWidth(context, baseSize: 170),
+                                  child: TextWithBorder("Calories: "),
+                                ),
+                                Spacer(),
                                 AppTextField(
+                                  verticalPadding: 10,
+                                  width: getWidth(context, baseSize: 91),
+                                  backgrund: true,
                                   controller: TextEditingController(
                                     text: item.calories.toString(),
                                   ),
                                   isEdit: true,
-                                )
+                                ),
                               ],
                             ),
+                            Gap(4),
                             Row(
                               children: [
-                                TextWithBorder("Fat: "),
+                                SizedBox(
+                                  width: getWidth(context, baseSize: 170),
+                                  child: TextWithBorder("Fat: "),
+                                ),
+                                Spacer(),
                                 AppTextField(
+                                  verticalPadding: 10,
+                                  width: getWidth(context, baseSize: 91),
+                                  backgrund: true,
                                   controller: TextEditingController(
                                     text: item.fat.toString(),
                                   ),
                                   isEdit: true,
-                                )
+                                ),
                               ],
                             ),
+                            Gap(4),
                             Row(
                               children: [
-                                TextWithBorder("Protein: "),
+                                SizedBox(
+                                  width: getWidth(context, baseSize: 170),
+                                  child: TextWithBorder("Protein: "),
+                                ),
+                                Spacer(),
                                 AppTextField(
+                                  verticalPadding: 10,
+                                  width: getWidth(context, baseSize: 91),
+                                  backgrund: true,
                                   controller: TextEditingController(
                                     text: item.protein.toString(),
                                   ),
                                   isEdit: true,
-                                )
+                                ),
                               ],
                             ),
+                            Gap(4),
                             Row(
                               children: [
-                                TextWithBorder("Carbohydrates: "),
+                                SizedBox(
+                                  width: getWidth(context, baseSize: 170),
+                                  child: FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: TextWithBorder("Carbohydrates: "),
+                                  ),
+                                ),
+                                Spacer(),
                                 AppTextField(
+                                  verticalPadding: 10,
+                                  width: getWidth(context, baseSize: 91),
+                                  backgrund: true,
                                   controller: TextEditingController(
                                     text: item.carbohydrates.toString(),
                                   ),
                                   isEdit: true,
-                                )
+                                ),
                               ],
                             ),
                           ],
                         ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
-              ),
-              TextWithBorder(item.description),
-              ListView.separated(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemCount: item.ingredients.length,
-                separatorBuilder: (_, __) => Gap(8),
-                itemBuilder: (context, index) => Column(
-                  children: [
-                    TextWithBorder(item.ingredients[index].name),
-                    AppTextField(
-                      controller: TextEditingController(
-                        text: item.ingredients[index].quantity.toString(),
+                  Gap(15),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Colors.black.withValues(alpha: 0.28),
+                        borderRadius: BorderRadius.circular(13),
                       ),
-                      isEdit: true,
-                    ),
-                    AppButton(
-                      style: ButtonColors.green,
-                      isRound: true,
-                      onPressed: () {
-                        context.read<UserBloc>().add(UserSaveShoppingData(
-                            ingredient: item.ingredients[index]));
-                      },
-                      text: "",
-                      child: AppIcon(asset: IconProvider.shop.buildImageUrl()),
-                    ),
-                  ],
-                ),
-              ),
-              TextWithBorder("Steps:"),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image:
-                            AssetImage(IconProvider.button.buildImageUrl()))),
-                child: Column(
-                  children: [
-                    TextWithBorder(
-                        "Step ${currentStep + 1} of ${item.steps.length}"),
-                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 20,
+                        ),
                         child: TextWithBorder(
-                            item.steps[currentStep].description)),
-                    AppButton(
-                      onPressed: () => _goToNextStep(state),
-                      style: ButtonColors.green,
-                      text: "Next",
+                          item.description,
+                          fontSize: 17,
+                        ),
+                      ),
                     ),
-                  ],
-                ),
+                  ),
+                  Gap(15),
+                  SizedBox(
+                    height: 212,
+                    child: ListView.separated(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: item.ingredients.length,
+                      separatorBuilder: (_, __) => Gap(8),
+                      itemBuilder: (context, index) => DecoratedBox(
+                        decoration: BoxDecoration(
+                          color: Colors.black.withValues(alpha: 0.28),
+                          borderRadius: BorderRadius.circular(13),
+                        ),
+                        child: SizedBox(
+                          width: 100,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                width: 85,
+                                height: 73,
+                                child: Center(
+                                  child: FittedBox(
+                                    fit: BoxFit.scaleDown,
+                                    child: TextWithBorder(
+                                      item.ingredients[index].name
+                                          .replaceAll(' ', '\n'),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Gap(15),
+                              AppTextField(
+                                width: 85,
+                                backgrund: true,
+                                controller: TextEditingController(
+                                  text: item.ingredients[index].quantity
+                                      .toString(),
+                                ),
+                                isEdit: true,
+                              ),
+                              Gap(15),
+                              AppButton(
+                                style: ButtonColors.green,
+                                isRound: true,
+                                onPressed: () {
+                                  context.read<UserBloc>().add(
+                                        UserSaveShoppingData(
+                                          ingredient: item.ingredients[index],
+                                        ),
+                                      );
+                                },
+                                text: "",
+                                child: AppIcon(
+                                  asset: IconProvider.shop.buildImageUrl(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  TextWithBorder("Steps:"),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(IconProvider.button.buildImageUrl()),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Column(
+                          children: [
+                            TextWithBorder(
+                              "Step ${currentStep + 1} of ${item.steps.length}",
+                            ),
+                            TextWithBorder(item.steps[currentStep].description),
+                            AppButton(
+                              onPressed: () => _goToNextStep(state),
+                              style: ButtonColors.green,
+                              text: "Next",
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Gap(25),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
-      );
-    });
+        );
+      },
+    );
   }
 }
