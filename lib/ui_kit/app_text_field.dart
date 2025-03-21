@@ -78,7 +78,6 @@ class AppTextField extends StatelessWidget {
     this.flex = 0,
     this.isEdit = true,
     this.onChanged,
-
   });
 
   final TextEditingController? controller;
@@ -106,6 +105,10 @@ class AppTextField extends StatelessWidget {
             onTapOutside: (event) {
               FocusScope.of(context).unfocus();
             },
+            style: const TextStyle(
+              color: Color(0xFF894406),
+              fontSize: 17,
+            ),
             readOnly: isEdit,
             maxLines: maxLines,
             placeholder: title,
