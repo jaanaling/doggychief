@@ -67,6 +67,7 @@ class _MainScreenState extends State<MainScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
+                    spacing: 10,
                     children: [
                       AnimatedButton(
                         onPressed: () {
@@ -108,7 +109,18 @@ class _MainScreenState extends State<MainScreen> {
                           );
                         },
                       ),
-                      Gap(10),
+                      AppButton(
+                        isRound: true,
+                        style: ButtonColors.green,
+                        text: '',
+                        child:
+                            AppIcon(asset: IconProvider.help.buildImageUrl()),
+                        onPressed: () {
+                          context.push(
+                            '${RouteValue.home.path}/${RouteValue.recommendation.path}',
+                          );
+                        },
+                      ),
                       AppButton(
                         isRound: true,
                         style: ButtonColors.yellow,
@@ -121,7 +133,6 @@ class _MainScreenState extends State<MainScreen> {
                           );
                         },
                       ),
-                      Gap(10),
                       AppButton(
                         isRound: true,
                         style: ButtonColors.green,
@@ -142,18 +153,17 @@ class _MainScreenState extends State<MainScreen> {
                   child: Row(
                     children: [
                       Stack(
+                        alignment: Alignment.center,
                         children: [
                           AppIcon(
                             asset: IconProvider.search.buildImageUrl(),
                             height: getHeight(context, baseSize: 75),
-                            width: getWidth(context, baseSize: 200),
+                            width: getWidth(context, baseSize: 220),
                           ),
-                          SizedBox(
-                            width: getWidth(context, baseSize: 200),
-                            height: getHeight(context, baseSize: 75),
-                            child: AppTextField(
-                              controller: controller,
-                            ),
+                          AppTextField(
+                            controller: controller,
+                            width: getWidth(context, baseSize: 150),
+                            maxLines: 1,
                           ),
                         ],
                       ),
@@ -169,6 +179,7 @@ class _MainScreenState extends State<MainScreen> {
                         ),
                         onPressed: () {
                           setState(() {
+                            state.dog.updateRecommendations(state.recipe);
                             isRecomended = !isRecomended;
                           });
                         },
@@ -322,7 +333,7 @@ class _MainScreenState extends State<MainScreen> {
                                 AnimatedButton(
                                   onPressed: () {
                                     setState(() {
-                                      isFavorite = !isFavorite;
+                                  
 
                                       context.read<UserBloc>().add(
                                             UserToggleFavoriteData(

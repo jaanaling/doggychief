@@ -257,7 +257,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
       );
 
       final updatedShoppingList = currentDog.shoppingList
-          .where((element) => element.ingredient.id == event.ingredient.id)
+          .where((element) => element.ingredient.id != event.ingredient.id)
           .toList();
 
       final List<Storage> updatedStorageList = [];

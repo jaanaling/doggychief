@@ -19,12 +19,12 @@ enum IconProvider {
   masq(imageName: "masq.png"),
   mark(imageName: 'mark.svg'),
   cross(imageName: 'cross.svg'),
-  dialog(imageName: 'dialog.png'),
+  dialog(imageName: 'Rectangle 37.png'),
   search(imageName: "search.png"),
   addphoto(imageName: "add photo.svg"),
   splash(imageName: "splash.png"),
   loader(imageName: "loader.svg"),
-
+  help(imageName: "help.png"),
   unknown(imageName: '');
 
   const IconProvider({required this.imageName});

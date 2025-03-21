@@ -38,7 +38,7 @@ class TextWithBorder extends StatelessWidget {
             fontFamily: fontFamily ?? 'Font',
             foreground: Paint()
               ..style = PaintingStyle.stroke
-              ..strokeWidth = 2
+              ..strokeWidth = 4
               ..color = borderColor ?? const Color(0xFFA25511),
           ),
         ),

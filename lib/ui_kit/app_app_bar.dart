@@ -23,9 +23,9 @@ class AppAppBar extends StatelessWidget {
           children: [
             AnimatedButton(
                 onPressed: () => context.pop(),
-                child: AppIcon(asset: IconProvider.back.buildImageUrl())),
+                child: AppIcon(asset: IconProvider.back.buildImageUrl(), height: 60, width: 60,)),
             Spacer(),
-            Expanded(flex: 5, child: TextWithBorder(title!)),
+            Expanded(flex: 5, child: TextWithBorder(title!, fontSize: 31,)),
             Spacer(flex: 2),
           ],
         ),

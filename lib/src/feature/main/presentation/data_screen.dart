@@ -94,7 +94,10 @@ class _DataScreenState extends State<DataScreen> {
                 itemBuilder: (context, index) => AnimatedButton(
                   onPressed: () => context.push(
                     "${RouteValue.home.path}/${RouteValue.base.path}/${RouteValue.description.path}",
-                    extra: index,
+                    extra: state.food
+                              .where((e) => e.isGood == isGood)
+                              .elementAt(index)
+                              .id -1,
                   ),
                   child: Container(
                     decoration: BoxDecoration(

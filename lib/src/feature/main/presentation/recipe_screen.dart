@@ -33,6 +33,8 @@ class _RecipeScreenState extends State<RecipeScreen> {
     final recipe =
         state.recipe.firstWhere((element) => element.id == widget.id);
     final item = recipe;
+    bool isFavorite = state.dog.favoriteRecipes.contains(item.id);
+    
 
     if (currentStep < recipe.steps.length - 1) {
       setState(() {
@@ -46,13 +48,13 @@ class _RecipeScreenState extends State<RecipeScreen> {
             backgroundColor: Colors.transparent,
             insetPadding: const EdgeInsets.symmetric(
               horizontal: 16,
-              vertical: 24,
+              vertical: 2,
             ),
             child: Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: Container(
                 width: 314,
-                height: 154,
+                height: 400,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(IconProvider.dialog.buildImageUrl()),
@@ -60,20 +62,26 @@ class _RecipeScreenState extends State<RecipeScreen> {
                   ),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      spacing: 15,
                       children: [
                         AnimatedButton(
                           onPressed: () {
                             context
                                 .read<UserBloc>()
                                 .add(UserToggleFavoriteData(id: item.id));
+                                isFavorite = !isFavorite;
+                            setState(() {});
                           },
                           child: AppIcon(
-                            asset: state.dog.favoriteRecipes.contains(item.id)
+                            asset: isFavorite
                                 ? IconProvider.favorites.buildImageUrl()
                                 : IconProvider.unfavorite.buildImageUrl(),
+                            width: 45,
+                            height: 45,
                           ),
                         ),
                         AnimatedButton(
@@ -82,8 +90,11 @@ class _RecipeScreenState extends State<RecipeScreen> {
                           },
                           child: AppIcon(
                             asset: IconProvider.share.buildImageUrl(),
+                            width: 45,
+                            height: 45,
                           ),
                         ),
+                        Gap(8)
                       ],
                     ),
                     const TextWithBorder(
@@ -91,7 +102,10 @@ class _RecipeScreenState extends State<RecipeScreen> {
                       fontSize: 23,
                       textAlign: TextAlign.center,
                     ),
-                    AppIcon(asset: IconProvider.masq.buildImageUrl()),
+                    AppIcon(
+                      asset: IconProvider.masq.buildImageUrl(),
+                      height: 200,
+                    ),
                     AppButton(
                       onPressed: () => context
                         ..pop()
@@ -409,7 +423,8 @@ class _RecipeScreenState extends State<RecipeScreen> {
                     child: Container(
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage(IconProvider.button.buildImageUrl()),
+                          image:
+                              AssetImage(IconProvider.button.buildImageUrl()),
                         ),
                       ),
                       child: Padding(

@@ -117,8 +117,8 @@ class Recommendations {
     final double portionCalories = rec.dailyCalories / rec.mealsPerDay;
 
     // Допустим, допустимое отклонение = 20%
-    final double lowerBound = portionCalories * 0.8;
-    final double upperBound = portionCalories * 1.2;
+    final double lowerBound = portionCalories * 0.6;
+    final double upperBound = portionCalories * 1.4;
 
     // 1. Фильтруем рецепты по аллергенам
     List<Recipe> filtered = allRecipes.where((recipe) {

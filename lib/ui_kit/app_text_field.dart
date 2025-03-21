@@ -15,12 +15,14 @@ class CountTextField extends StatelessWidget {
     required this.title,
     required this.setState,
     required this.width,
+    this.isDouble = false,
   });
 
   final TextEditingController controller;
   final String title;
   final VoidCallback setState;
   final double width;
+  final bool isDouble;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -41,11 +43,22 @@ class CountTextField extends StatelessWidget {
                 children: [
                   AnimatedButton(
                     onPressed: () {
-                      if (controller.text.isNotEmpty) {
-                        controller.text =
-                            (int.parse(controller.text) - 1).toString();
-                      } else {
-                        controller.text = "0";
+                      if (isDouble) {
+                        if (controller.text.isNotEmpty) {
+                          controller.text =
+                              (double.parse(controller.text) - 0.1)
+                                  .toStringAsFixed(1);
+                        } else {
+                          controller.text = "0.0";
+                        }
+                      }
+                      if (!isDouble) {
+                        if (controller.text.isNotEmpty) {
+                          controller.text =
+                              (int.parse(controller.text) - 1).toString();
+                        } else {
+                          controller.text = "0";
+                        }
                       }
                       setState();
                     },
@@ -63,11 +76,23 @@ class CountTextField extends StatelessWidget {
                   ),
                   AnimatedButton(
                     onPressed: () {
-                      if (controller.text.isNotEmpty) {
-                        controller.text =
-                            (int.parse(controller.text) + 1).toString();
-                      } else {
-                        controller.text = "1";
+                      if (isDouble) {
+                        if (controller.text.isNotEmpty) {
+                          controller.text =
+                              (double.parse(controller.text) + 0.1)
+                                  .toStringAsFixed(1);
+                        } else {
+                          controller.text = "0.1";
+                        }
+                      }
+
+                      if (!isDouble) {
+                        if (controller.text.isNotEmpty) {
+                          controller.text =
+                              (int.parse(controller.text) + 1).toString();
+                        } else {
+                          controller.text = "1";
+                        }
                       }
                       setState();
                     },

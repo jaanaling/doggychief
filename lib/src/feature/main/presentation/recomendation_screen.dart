@@ -7,6 +7,7 @@ import 'package:doggie_chef/ui_kit/app_app_bar.dart';
 import 'package:doggie_chef/ui_kit/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gap/gap.dart';
 
 class RecomendationScreen extends StatefulWidget {
   const RecomendationScreen({super.key});
@@ -29,59 +30,75 @@ class _RecomendationScreenState extends State<RecomendationScreen> {
         final tips = state.tips;
 
         return BackdropFilter(
-            filter: ImageFilter.blur(
-              sigmaX: 22.0,
-              sigmaY: 22.0,
-            ),
-            child: SingleChildScrollView(
-                child: Column(
-              children: [
-                AppAppBar(),
-                Text(
-                    "Daily Calories: ${recomendations.dailyCalories.toStringAsFixed(2)}"),
-                Text(
-                    "Daily Fat: ${recomendations.dailyFat.toStringAsFixed(2)}"),
-                Text(
-                    "Daily Protein: ${recomendations.dailyProtein.toStringAsFixed(2)}"),
-                Text(
-                    "Daily Carbohydrates: ${recomendations.dailyCarbohydrates.toStringAsFixed(2)}"),
-                Text("Meals Per Day: ${recomendations.mealsPerDay}"),
-                Container(
+          filter: ImageFilter.blur(
+            sigmaX: 22.0,
+            sigmaY: 22.0,
+          ),
+          child: Column(
+            children: [
+              AppAppBar(title: "Recommendations"),
+              TextWithBorder(
+                "Daily Calories: ${recomendations.dailyCalories.toStringAsFixed(2)}",
+              ),
+              TextWithBorder(
+                "Daily Fat: ${recomendations.dailyFat.toStringAsFixed(2)}",
+              ),
+              TextWithBorder(
+                "Daily Protein: ${recomendations.dailyProtein.toStringAsFixed(2)}",
+              ),
+              TextWithBorder(
+                "Daily Carbohydrates: ${recomendations.dailyCarbohydrates.toStringAsFixed(2)}",
+              ),
+              TextWithBorder("Meals Per Day: ${recomendations.mealsPerDay}"),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image:
-                              AssetImage(IconProvider.button.buildImageUrl()))),
-                  child: Column(
-                    children: [
-                      Expanded(
-                          child: TextWithBorder(tips[currentId].description)),
-                      Row(
-                        children: [
-                          AppButton(
-                            onPressed: () => setState(() {
-                              if (currentId > 0) {
-                                currentId--;
-                              }
-                            }),
-                            style: ButtonColors.red,
-                            text: "Back",
-                          ),
-                          AppButton(
-                            onPressed: () => setState(() {
-                              if (currentId < tips.length - 1) {
-                                currentId++;
-                              }
-                            }),
-                            style: ButtonColors.green,
-                            text: "Next",
-                          ),
-                        ],
-                      ),
-                    ],
+                    color: Colors.black.withValues(alpha: 0.28),
+                    borderRadius: BorderRadius.circular(13),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: TextWithBorder(tips[currentId].description),
+                        ),
+                        Gap(28),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            AppButton(
+                              onPressed: () => setState(() {
+                                if (currentId > 0) {
+                                  currentId--;
+                                }
+                              }),
+                              style: ButtonColors.red,
+                              text: "Back",
+                            ),
+                            AppButton(
+                              onPressed: () => setState(() {
+                                if (currentId < tips.length - 1) {
+                                  currentId++;
+                                }
+                              }),
+                              style: ButtonColors.green,
+                              text: "Next",
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ],
-            )));
+              ),
+              Spacer()
+            ],
+          ),
+        );
       },
     );
   }
